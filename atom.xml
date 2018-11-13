@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ptsxdhcl.github.io/"/>
-  <updated>2018-11-12T13:51:44.420Z</updated>
+  <updated>2018-11-13T01:33:32.499Z</updated>
   <id>http://ptsxdhcl.github.io/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>sql语句</title>
+    <link href="http://ptsxdhcl.github.io/2018/11/13/01/"/>
+    <id>http://ptsxdhcl.github.io/2018/11/13/01/</id>
+    <published>2018-11-13T01:32:17.951Z</published>
+    <updated>2018-11-13T01:33:32.499Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;这里收集了一些常用的sql语句。。。&lt;/p&gt;
+
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>test</title>
     <link href="http://ptsxdhcl.github.io/2018/11/12/python-01/"/>
     <id>http://ptsxdhcl.github.io/2018/11/12/python-01/</id>
     <published>2018-11-12T01:50:05.681Z</published>
-    <updated>2018-11-12T13:51:44.420Z</updated>
+    <updated>2018-11-13T01:32:03.284Z</updated>
     
     <summary type="html">
     
