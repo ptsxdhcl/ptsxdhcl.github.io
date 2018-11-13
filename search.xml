@@ -12,14 +12,18 @@
       
       <categories>
           
-          <category> 技术 </category>
+          <category> MySQL </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> sql,python </tag>
+            <tag> sql </tag>
+            
+            <tag> python </tag>
+            
+            <tag> mysql </tag>
             
         </tags>
       
