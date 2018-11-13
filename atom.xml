@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ptsxdhcl.github.io/"/>
-  <updated>2018-11-13T01:33:32.499Z</updated>
+  <updated>2018-11-13T01:40:29.081Z</updated>
   <id>http://ptsxdhcl.github.io/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>sql语句</title>
-    <link href="http://ptsxdhcl.github.io/2018/11/13/01/"/>
-    <id>http://ptsxdhcl.github.io/2018/11/13/01/</id>
+    <link href="http://ptsxdhcl.github.io/2018/11/13/sql-yu-ju/"/>
+    <id>http://ptsxdhcl.github.io/2018/11/13/sql-yu-ju/</id>
     <published>2018-11-13T01:32:17.951Z</published>
-    <updated>2018-11-13T01:33:32.499Z</updated>
+    <updated>2018-11-13T01:40:29.081Z</updated>
     
     <summary type="html">
     
@@ -29,13 +29,14 @@
       
         
         
-          &lt;p&gt;这里收集了一些常用的sql语句。。。&lt;/p&gt;
-
+          &lt;p&gt;这里收集了一些&lt;a href=&quot;https://www.nowcoder.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;牛客网&lt;/a&gt;和&lt;a href=&quot;https://leetcode-cn.com/&quot; target=&quot;_blank&quot;
         
       
     
     </summary>
     
+    
+      <category term="sql,python" scheme="http://ptsxdhcl.github.io/tags/sql-python/"/>
     
   </entry>
   
