@@ -5,8 +5,8 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="python">
-    <meta name="description" content="xu yichen">
+    <meta name="keywords" content="分类: Django, python">
+    <meta name="description" content="分类: Django | xu yichen">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>xu yichen</title>
+    <title>分类: Django | xu yichen</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -247,14 +247,7 @@
     </nav>
 </header>
 
-<style type="text/css">
-    /* don't remove. */
-    .index-cover {
-        height: 100vh;
-    }
-</style>
-
-<div class="bg-cover index-cover about-cover" style="background-image: url('/medias/cover.jpg')">
+<div class="bg-cover  about-cover" style="background-image: url('/medias/cover.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
@@ -274,32 +267,6 @@
             </div>
         </div>
         
-        <div class="cover-btns">
-            <a href="#recommend-sections" class="waves-effect waves-light btn">
-                <i class="fa fa-angle-double-down"></i>继续阅读
-            </a>
-
-            
-            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light btn" target="_blank">
-                <i class="fa fa-github-alt"></i>Github
-            </a>
-            
-        </div>
-        <div class="cover-social-link"><a href="https://github.com/ptsxdhcl/ptsxdhcl.github.io" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
-    <i class="fa fa-github"></i>
-</a>
-<a href="mailto:chenjiayin1990@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
-    <i class="fa fa-envelope-open"></i>
-</a>
-<a href="#!" class="tooltipped" data-tooltip="QQ联系我: 1242356987" data-position="top" data-delay="50">
-    <i class="fa fa-qq"></i>
-</a>
-
-<a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
-    <i class="fa fa-rss"></i>
-</a>
-</div>
-        
     </div>
 </div>
 
@@ -312,25 +279,52 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 
     
 
-    <div id="recommend-sections">
-    
-    
-
-
-
-    
+<div id="category-cloud" class="container chip-container">
+    <div class="card">
+        <div class="card-content">
+            <div class="tag-title center-align">文章分类</div>
+            <div class="tag-chips">
+                
+                
+                
+                <a href="/categories/Web/" title="Web: 2">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default " style="background-color: #F9EBEA;">Web
+                        <span class="tag-length">2</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/MySQL/" title="MySQL: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default " style="background-color: #F5EEF8;">MySQL
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/Web/Django/" title="Django: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-active " style="background-color: #D5F5E3;">Django
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+            </div>
+        </div>
     </div>
+</div>
 
     
 
-    <!-- 所有文章卡片 -->
     <article id="articles" class="container articles">
-        <div class="row article-row">
+        <div class="row tags-posts">
             
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
                     <a href="/2018/11/20/django-chu-shi/">
-                        <div class="card-image">
+                        <div class="card-image tag-image">
                             
                             
                             <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="sql语句">
@@ -338,7 +332,6 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
                             <span class="card-title">sql语句</span>
                         </div>
                     </a>
-
                     <div class="card-content article-content">
                         <div class="summary">Django简介1，认识Django
 Django是一个高级的Python Web框架，它鼓励快速开发和清洁，务实的设计。
@@ -388,144 +381,9 @@ Django是一个高级的Python Web框架，它鼓励快速开发和清洁，务�
                 </div>
             </div>
             
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2018/11/20/web-kai-fa-chu-shi/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="sql语句">
-                            
-                            <span class="card-title">sql语句</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary">一，Web应用结构及工作原理
-二，Web框架1，什么是框架？软件框架就是为实现或完成某种软件开发时,提供了一些基础的软件产品,
-框架的功能类</div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-11-20
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fa fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/Web/" class="post-category" target="_blank">
-                                    Web
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/Python/" target="_blank">
-                            <span class="chip bg-color">Python</span>
-                        </a>
-                        
-                        <a href="/tags/Web开发/" target="_blank">
-                            <span class="chip bg-color">Web开发</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2018/11/13/sql-yu-ju/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="sql语句">
-                            
-                            <span class="card-title">sql语句</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary">这里收集了一些牛客网和领扣常用的sql语句。。。
-
-</div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-11-13
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fa fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/MySQL/" class="post-category" target="_blank">
-                                    MySQL
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/sql/" target="_blank">
-                            <span class="chip bg-color">sql</span>
-                        </a>
-                        
-                        <a href="/tags/python/" target="_blank">
-                            <span class="chip bg-color">python</span>
-                        </a>
-                        
-                        <a href="/tags/mysql/" target="_blank">
-                            <span class="chip bg-color">mysql</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2018/11/11/hello-world/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
-                            
-                            <span class="card-title">Hello World</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary">Welcome to Hexo! This is your very first post. Check documentation for</div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-11-11
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fa fa-user fa-fw"></i>
-                                许逸尘
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                </div>
-            </div>
-            
         </div>
     </article>
-
 </main>
-
 
 
 <footer class="page-footer bg-color">

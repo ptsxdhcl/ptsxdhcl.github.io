@@ -5,8 +5,11 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, python">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="sql语句, python">
+    <meta name="description" content="一，Web应用结构及工作原理
+二，Web框架1，什么是框架？软件框架就是为实现或完成某种软件开发时,提供了一些基础的软件产品,
+框架的功能类似于基础设施,提供并实现最为基础的软件架构和体系
+通常情况下我们依据框架来实现更为复杂的业务程序开发">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +17,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Hello World | xu yichen</title>
+    <title>sql语句 | xu yichen</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -249,13 +252,13 @@
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Hello World
+                        sql语句
                     </div>
                 </div>
             </div>
@@ -273,30 +276,67 @@
     <div class="card">
         <div class="card-content article-info">
             
+            <div class="article-tag">
+                
+                <a href="/tags/Python/" target="_blank">
+                    <span class="chip bg-color">Python</span>
+                </a>
+                
+                <a href="/tags/Web开发/" target="_blank">
+                    <span class="chip bg-color">Web开发</span>
+                </a>
+                
+            </div>
+            
             <div class="post-info">
+                
+                <span class="post-cate">
+                    <i class="fa fa-bookmark fa-fw icon-category"></i>
+                    
+                    <a href="/categories/Web/" class="post-category" target="_blank">
+                        Web
+                    </a>
+                    
+                </span>
                 
 
                 <span class="post-date">
-                    <i class="fa fa-clock-o fa-fw"></i>2018-11-11
+                    <i class="fa fa-clock-o fa-fw"></i>2018-11-20
                 </span>
             </div>
         </div>
         <hr>
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span>
-</code></pre>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server
-</code></pre>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate
-</code></pre>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy
-</code></pre>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+                <h1 id="一，Web应用结构及工作原理"><a href="#一，Web应用结构及工作原理" class="headerlink" title="一，Web应用结构及工作原理"></a>一，Web应用结构及工作原理</h1><p><img src="../../public/medias/webjg.png" alt="web"></p>
+<h1 id="二，Web框架"><a href="#二，Web框架" class="headerlink" title="二，Web框架"></a>二，Web框架</h1><h2 id="1，什么是框架？"><a href="#1，什么是框架？" class="headerlink" title="1，什么是框架？"></a>1，什么是框架？</h2><p>软件框架就是为实现或完成某种软件开发时,提供了一些基础的软件产品,</p>
+<p>框架的功能类似于<strong>基础设施</strong>,提供并实现<strong>最为基础的软件架构和体系</strong></p>
+<p>通常情况下我们依据框架来实现更为复杂的业务程序开发</p>
+<p>框架就是程序的<strong>骨架</strong></p>
+<h2 id="2，框架的优缺点"><a href="#2，框架的优缺点" class="headerlink" title="2，框架的优缺点"></a>2，框架的优缺点</h2><pre><code>可重用
+成熟，稳健
+可扩展性良好
+选对框架很重要
+</code></pre><h2 id="3，python中常见的框架"><a href="#3，python中常见的框架" class="headerlink" title="3，python中常见的框架"></a>3，python中常见的框架</h2><p>大包大揽 Django 被官方称之为完美主义者的Web框架。</p>
+<p>力求精简 web.py和Tornado</p>
+<p>新生代微框架 Flask和Bottle</p>
+<h2 id="4，web框架中的一些概念"><a href="#4，web框架中的一些概念" class="headerlink" title="4，web框架中的一些概念"></a>4，web框架中的一些概念</h2><p><strong>MVC</strong></p>
+<ul>
+<li>大部分开发语言中都有MVC框架</li>
+<li>MVC框架的核心思想是：解耦</li>
+<li>降低各功能模块之间的耦合性，方便变更，更容易重构代码，最大程度上实现代码的重用</li>
+<li>m表示model，主要用于对数据库层的封装</li>
+<li>v表示view，用于向用户展示结果</li>
+<li>c表示controller，是核心，用于处理请求、获取数据、返回结果 </li>
+</ul>
+<p><strong>MVT</strong></p>
+<ul>
+<li>Django是一款python的web开发框架</li>
+<li>与MVC有所不同，属于MVT框架</li>
+<li>m表示model，负责与数据库交互</li>
+<li>v表示view，是核心，负责接收请求、获取数据、返回结果</li>
+<li>t表示template，负责呈现内容到浏览器</li>
+</ul>
 
             </div>
             <hr>
@@ -435,7 +475,7 @@
                     <span class="reprint-tip">转载请注明: </span>
                     <a href="http://ptsxdhcl.github.io" class="b-link-green">xu yichen</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2018/11/11/hello-world/" class="b-link-green">Hello World</a>
+                    <a href="/2018/11/20/web-kai-fa-chu-shi/" class="b-link-green">sql语句</a>
                 </p>
             </div>
         </div>
@@ -457,6 +497,68 @@
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">上一篇</div>
             <div class="card">
+                <a href="/2018/11/20/django-chu-shi/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="sql语句">
+                        
+                        <span class="card-title">sql语句</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">Django简介1，认识Django
+Django是一个高级的Python Web框架，它鼓励快速开发和清洁，务实的设计。
+由经验丰富的开发人员构建，它负责Web开发的许多麻烦，因此您可以专注于编写应用程序，而无需重新创建轮子。
+它是免费的</div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2018-11-20
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Web/" class="post-category" target="_blank">
+                                    Web
+                                </a>
+                            
+                            <a href="/categories/Web/Django/" class="post-category" target="_blank">
+                                    Django
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Python/" target="_blank">
+                        <span class="chip bg-color">Python</span>
+                    </a>
+                    
+                    <a href="/tags/Web开发/" target="_blank">
+                        <span class="chip bg-color">Web开发</span>
+                    </a>
+                    
+                    <a href="/tags/Linux/" target="_blank">
+                        <span class="chip bg-color">Linux</span>
+                    </a>
+                    
+                    <a href="/tags/Django/" target="_blank">
+                        <span class="chip bg-color">Django</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">下一篇</div>
+            <div class="card">
                 <a href="/2018/11/13/sql-yu-ju/">
                     <div class="card-image">
                         
@@ -471,9 +573,9 @@
 
 </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2018-11-13
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-11-13
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -502,38 +604,6 @@
                     </a>
                     
                 </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">本篇</div>
-            <div class="card">
-                <a href="/2018/11/11/hello-world/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
-                        
-                        <span class="card-title">Hello World</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex</div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-11-11
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-user fa-fw"></i>
-                            许逸尘
-                            
-                        </span>
-                    </div>
-                </div>
-
                 
             </div>
         </div>

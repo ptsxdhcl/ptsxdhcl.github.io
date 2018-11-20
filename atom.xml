@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ptsxdhcl.github.io/"/>
-  <updated>2018-11-13T06:18:31.118Z</updated>
+  <updated>2018-11-20T13:33:55.167Z</updated>
   <id>http://ptsxdhcl.github.io/</id>
   
   <author>
@@ -15,6 +15,68 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>sql语句</title>
+    <link href="http://ptsxdhcl.github.io/2018/11/20/django-chu-shi/"/>
+    <id>http://ptsxdhcl.github.io/2018/11/20/django-chu-shi/</id>
+    <published>2018-11-20T13:29:05.839Z</published>
+    <updated>2018-11-20T13:33:55.167Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Django简介&quot;&gt;&lt;a href=&quot;#Django简介&quot; class=&quot;headerlink&quot; title=&quot;Django简介&quot;&gt;&lt;/a&gt;Django简介&lt;/h1&gt;&lt;h2 id=&quot;1，认识Django&quot;&gt;&lt;a href=&quot;#1，认识Django&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Web" scheme="http://ptsxdhcl.github.io/categories/Web/"/>
+    
+      <category term="Django" scheme="http://ptsxdhcl.github.io/categories/Web/Django/"/>
+    
+    
+      <category term="Python" scheme="http://ptsxdhcl.github.io/tags/Python/"/>
+    
+      <category term="Web开发" scheme="http://ptsxdhcl.github.io/tags/Web%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="Linux" scheme="http://ptsxdhcl.github.io/tags/Linux/"/>
+    
+      <category term="Django" scheme="http://ptsxdhcl.github.io/tags/Django/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>sql语句</title>
+    <link href="http://ptsxdhcl.github.io/2018/11/20/web-kai-fa-chu-shi/"/>
+    <id>http://ptsxdhcl.github.io/2018/11/20/web-kai-fa-chu-shi/</id>
+    <published>2018-11-20T13:03:10.300Z</published>
+    <updated>2018-11-20T13:28:43.882Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;一，Web应用结构及工作原理&quot;&gt;&lt;a href=&quot;#一，Web应用结构及工作原理&quot; class=&quot;headerlink&quot; title=&quot;一，Web应用结构及工作原理&quot;&gt;&lt;/a&gt;一，Web应用结构及工作原理&lt;/h1&gt;&lt;p&gt;&lt;img
+        
+      
+    
+    </summary>
+    
+      <category term="Web" scheme="http://ptsxdhcl.github.io/categories/Web/"/>
+    
+    
+      <category term="Python" scheme="http://ptsxdhcl.github.io/tags/Python/"/>
+    
+      <category term="Web开发" scheme="http://ptsxdhcl.github.io/tags/Web%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
   
   <entry>
     <title>sql语句</title>
@@ -43,28 +105,6 @@
       <category term="python" scheme="http://ptsxdhcl.github.io/tags/python/"/>
     
       <category term="mysql" scheme="http://ptsxdhcl.github.io/tags/mysql/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>test</title>
-    <link href="http://ptsxdhcl.github.io/2018/11/12/python-01/"/>
-    <id>http://ptsxdhcl.github.io/2018/11/12/python-01/</id>
-    <published>2018-11-12T01:50:05.681Z</published>
-    <updated>2018-11-13T01:32:03.284Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
-        
-      
-    
-    </summary>
-    
     
   </entry>
   
