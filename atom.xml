@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ptsxdhcl.github.io/"/>
-  <updated>2018-11-20T13:55:37.297Z</updated>
+  <updated>2018-11-21T11:09:34.469Z</updated>
   <id>http://ptsxdhcl.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Web</title>
+    <link href="http://ptsxdhcl.github.io/2018/11/21/web-kai-fa-chu-shi-md/"/>
+    <id>http://ptsxdhcl.github.io/2018/11/21/web-kai-fa-chu-shi-md/</id>
+    <published>2018-11-21T11:03:16.896Z</published>
+    <updated>2018-11-21T11:09:34.469Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;一，Web应用结构及工作原理&quot;&gt;&lt;a href=&quot;#一，Web应用结构及工作原理&quot; class=&quot;headerlink&quot; title=&quot;一，Web应用结构及工作原理&quot;&gt;&lt;/a&gt;一，Web应用结构及工作原理&lt;/h1&gt;&lt;p&gt;&lt;img
+        
+      
+    
+    </summary>
+    
+      <category term="Web" scheme="http://ptsxdhcl.github.io/categories/Web/"/>
+    
+    
+      <category term="Python" scheme="http://ptsxdhcl.github.io/tags/Python/"/>
+    
+      <category term="Web开发" scheme="http://ptsxdhcl.github.io/tags/Web%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
   
   <entry>
     <title>Django</title>
@@ -47,34 +75,6 @@
       <category term="Linux" scheme="http://ptsxdhcl.github.io/tags/Linux/"/>
     
       <category term="Django" scheme="http://ptsxdhcl.github.io/tags/Django/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Web</title>
-    <link href="http://ptsxdhcl.github.io/2018/11/20/web-kai-fa-chu-shi/"/>
-    <id>http://ptsxdhcl.github.io/2018/11/20/web-kai-fa-chu-shi/</id>
-    <published>2018-11-20T13:03:10.300Z</published>
-    <updated>2018-11-21T10:45:57.585Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;一，Web应用结构及工作原理&quot;&gt;&lt;a href=&quot;#一，Web应用结构及工作原理&quot; class=&quot;headerlink&quot; title=&quot;一，Web应用结构及工作原理&quot;&gt;&lt;/a&gt;一，Web应用结构及工作原理&lt;/h1&gt;&lt;p&gt;&lt;img
-        
-      
-    
-    </summary>
-    
-      <category term="Web" scheme="http://ptsxdhcl.github.io/categories/Web/"/>
-    
-    
-      <category term="Python" scheme="http://ptsxdhcl.github.io/tags/Python/"/>
-    
-      <category term="Web开发" scheme="http://ptsxdhcl.github.io/tags/Web%E5%BC%80%E5%8F%91/"/>
     
   </entry>
   
