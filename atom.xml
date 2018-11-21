@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ptsxdhcl.github.io/"/>
-  <updated>2018-11-21T11:24:41.479Z</updated>
+  <updated>2018-11-21T13:55:00.347Z</updated>
   <id>http://ptsxdhcl.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>web面试题</title>
+    <link href="http://ptsxdhcl.github.io/2018/11/21/web-hou-tai-kuang-jia-mian-shi-ti/"/>
+    <id>http://ptsxdhcl.github.io/2018/11/21/web-hou-tai-kuang-jia-mian-shi-ti/</id>
+    <published>2018-11-21T11:42:33.520Z</published>
+    <updated>2018-11-21T13:55:00.347Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1，Django、Flask、Tornado的对比&quot;&gt;&lt;a href=&quot;#1，Django、Flask、Tornado的对比&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="django" scheme="http://ptsxdhcl.github.io/categories/django/"/>
+    
+      <category term="面试题" scheme="http://ptsxdhcl.github.io/categories/django/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    
+      <category term="web" scheme="http://ptsxdhcl.github.io/tags/web/"/>
+    
+      <category term="django" scheme="http://ptsxdhcl.github.io/tags/django/"/>
+    
+  </entry>
   
   <entry>
     <title>Web</title>
@@ -49,7 +79,7 @@
     <link href="http://ptsxdhcl.github.io/2018/11/20/django-chu-shi/"/>
     <id>http://ptsxdhcl.github.io/2018/11/20/django-chu-shi/</id>
     <published>2018-11-20T13:29:05.839Z</published>
-    <updated>2018-11-20T13:55:37.297Z</updated>
+    <updated>2018-11-21T11:38:34.603Z</updated>
     
     <summary type="html">
     
