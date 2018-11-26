@@ -3,6 +3,33 @@
   
     
     <entry>
+      <title>基础面试题</title>
+      <link href="/2018/11/23/ji-chu-mian-shi-ti/"/>
+      <url>/2018/11/23/ji-chu-mian-shi-ti/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1，python中的关键字yield有什么作用？"><a href="#1，python中的关键字yield有什么作用？" class="headerlink" title="1，python中的关键字yield有什么作用？"></a>1，python中的关键字yield有什么作用？</h2><pre><code>答案：保存当前运行状态(断点)，然后暂停执行，即将函数挂起。将yield关键字的值作为返回值返回，相当于起到了return的作用，当使用next(),send()函数时让函数从断点处继续执行(唤醒函数)。</code></pre><h2 id="2，这两个参数时什么意思-args-kwargs-我们为什么要使用他们？"><a href="#2，这两个参数时什么意思-args-kwargs-我们为什么要使用他们？" class="headerlink" title="2，这两个参数时什么意思:*args,**kwargs?我们为什么要使用他们？"></a>2，这两个参数时什么意思:*args,**kwargs?我们为什么要使用他们？</h2><pre><code>答案：*args 和 **kwargs通常使用在函数定义里，*args允许函数传入不定量个数的非关键字参数，是不定长参数；**kwargs允许函数传入不定量个数的关键字参数，是不定长关键字参数</code></pre><h2 id="3-python主要的内置数据类型都有哪些？print-dir-‘a’-的输出是什么？"><a href="#3-python主要的内置数据类型都有哪些？print-dir-‘a’-的输出是什么？" class="headerlink" title="3,python主要的内置数据类型都有哪些？print(dir(‘a’))的输出是什么？"></a>3,python主要的内置数据类型都有哪些？print(dir(‘a’))的输出是什么？</h2><pre><code>答案：数值型：整型，浮点型，布尔型，复数字符串型元组列表集合字典print(dir(&#39;a&#39;))的输出是关键字参数[&#39;__add__&#39;, &#39;__class__&#39;, &#39;__contains__&#39;, &#39;__delattr__&#39;, &#39;__dir__&#39;, &#39;__doc__&#39;, &#39;__eq__&#39;, &#39;__format__&#39;, &#39;__ge__&#39;, &#39;__getattribute__&#39;, &#39;__getitem__&#39;, &#39;__getnewargs__&#39;, &#39;__gt__&#39;, &#39;__hash__&#39;, &#39;__init__&#39;, &#39;__init_subclass__&#39;, &#39;__iter__&#39;, &#39;__le__&#39;, &#39;__len__&#39;, &#39;__lt__&#39;, &#39;__mod__&#39;, &#39;__mul__&#39;, &#39;__ne__&#39;, &#39;__new__&#39;, &#39;__reduce__&#39;, &#39;__reduce_ex__&#39;, &#39;__repr__&#39;, &#39;__rmod__&#39;, &#39;__rmul__&#39;, &#39;__setattr__&#39;, &#39;__sizeof__&#39;, &#39;__str__&#39;, &#39;__subclasshook__&#39;, &#39;capitalize&#39;, &#39;casefold&#39;, &#39;center&#39;, &#39;count&#39;, &#39;encode&#39;, &#39;endswith&#39;, &#39;expandtabs&#39;, &#39;find&#39;, &#39;format&#39;, &#39;format_map&#39;, &#39;index&#39;, &#39;isalnum&#39;, &#39;isalpha&#39;, &#39;isdecimal&#39;, &#39;isdigit&#39;, &#39;isidentifier&#39;, &#39;islower&#39;, &#39;isnumeric&#39;, &#39;isprintable&#39;, &#39;isspace&#39;, &#39;istitle&#39;, &#39;isupper&#39;, &#39;join&#39;, &#39;ljust&#39;, &#39;lower&#39;, &#39;lstrip&#39;, &#39;maketrans&#39;, &#39;partition&#39;, &#39;replace&#39;, &#39;rfind&#39;, &#39;rindex&#39;, &#39;rjust&#39;, &#39;rpartition&#39;, &#39;rsplit&#39;, &#39;rstrip&#39;, &#39;split&#39;, &#39;splitlines&#39;, &#39;startswith&#39;, &#39;strip&#39;, &#39;swapcase&#39;, &#39;title&#39;, &#39;translate&#39;, &#39;upper&#39;, &#39;zfill&#39;]</code></pre><h2 id="4，对比-args-和-kwargs-new和init-is和-的区别"><a href="#4，对比-args-和-kwargs-new和init-is和-的区别" class="headerlink" title="4，对比:*args 和**kwargs,new和init,is和==的区别"></a>4，对比:*args 和**kwargs,<strong>new</strong>和<strong>init</strong>,is和==的区别</h2><pre><code>答案：*args和**kwargs：*args表示另何多个无名参数(不定长参数)，它是一个元组；**kwargs表示关键字参数(不定长关键字参数)，它是一个字典。同时使用两者时，*args参数必须在**kwargs前面。__new__和__init__:__init__是当实例对象创建完成后被调用的，然后设置对象属性的初始值；__new__是在实例创建前被调用，它的任务就是创建实例然后返回该实例，是个静态方法。也就是说，__new__在__init__之前被调用，__new__的返回值(实例)将传递给__init__方法的第一个参数然后__init__给这个实例设置参数。is和==:都是对对象进行比较判断。is也被叫做同一性运算符，判断的是id是否相同；==是python标准操作符中的比较操作符，用来比较判断两个对象的值是否相等</code></pre><h2 id="5，装饰器-staticmethod和-classmethod-property的作用？"><a href="#5，装饰器-staticmethod和-classmethod-property的作用？" class="headerlink" title="5，装饰器@staticmethod和@classmethod,@property的作用？"></a>5，装饰器@staticmethod和@classmethod,@property的作用？</h2><pre><code>答案：@classmethod：类静态方法，与实例方法的区别是没有self参数，并且可以在类不进行实例化的情况下使用；@staticmethod:类方法，与实例化方法的区别在于接收的第一个参数不是self(类实例的指针)，而是cls(当前类的具体类型)；@property:属性方法，将一个类方法转为类属性来使用，只读属性。</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> python基础 </category>
+          
+          <category> 面试题 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 基础 </tag>
+            
+            <tag> python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>web面试题</title>
       <link href="/2018/11/21/web-hou-tai-kuang-jia-mian-shi-ti/"/>
       <url>/2018/11/21/web-hou-tai-kuang-jia-mian-shi-ti/</url>
@@ -102,9 +129,9 @@
       
         <tags>
             
-            <tag> sql </tag>
-            
             <tag> python </tag>
+            
+            <tag> sql </tag>
             
             <tag> mysql </tag>
             
