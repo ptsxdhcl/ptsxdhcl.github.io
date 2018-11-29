@@ -331,7 +331,7 @@ is和==:都是对对象进行比较判断。is也被叫做同一性运算符，�
 </code></pre>
 <h2 id="6，说说dict的item-方法和iteritems-方法的不同？"><a href="#6，说说dict的item-方法和iteritems-方法的不同？" class="headerlink" title="6，说说dict的item()方法和iteritems()方法的不同？"></a>6，说说dict的<code>item()</code>方法和<code>iteritems()</code>方法的不同？</h2><pre class=" language-markdown"><code class="language-markdown">item():可以将字典的所有键值对组成元组并且以列表的形式返回，因为dict是无序的，所以该返回的所有项也是无序的；
 iteritems():与items()作用大致相同，不过它的返回值是一个生成器。
-相对来说，item()需要花费更多的内存空间和时间，但访问某一项的时间更快；iteritems()花费很少的空间，通过next()不断取下一个值。
+相对来说，item()需要花费更多的内存空间和时间，但访问某一项所花费的时间更少；iteritems()花费很少的空间，通过next()不断取下一个值。
 </code></pre>
 <h2 id="7，python中的变量作用域-变量查找顺序-？"><a href="#7，python中的变量作用域-变量查找顺序-？" class="headerlink" title="7，python中的变量作用域(变量查找顺序)？"></a>7，python中的变量作用域(变量查找顺序)？</h2><pre class=" language-markdown"><code class="language-markdown">变量作用域是LEGB顺序。
   1，什么是LEGB？
@@ -356,7 +356,7 @@ iteritems():与items()作用大致相同，不过它的返回值是一个生成�
 (6),线程执行开销小，但不利于资源的管理和保护，进程相反。
 
 协程:协程又叫做微线程，一种用户态的轻量级线程，协程拥有自己的寄存器上下文和栈。
-优点： a,无需线程上下文切换的开销，协程避免了无意义的调度，由此可以提高性能。
+优点: a,无需线程上下文切换的开销，协程避免了无意义的调度，由此可以提高性能。
 <span class="token code keyword">      b,无需原子操作锁定及同步开销。</span>
 <span class="token code keyword">      c,方便切换控制流，简化编程模型。</span>
 <span class="token code keyword">      d,高并发+高拓展性+低成本。</span>
@@ -383,11 +383,13 @@ re.compile是将正则表达式编译成一个对象，加快匹配速度，并�
 <h2 id="14，什么是lambda函数，它有什么好处？"><a href="#14，什么是lambda函数，它有什么好处？" class="headerlink" title="14，什么是lambda函数，它有什么好处？"></a>14，什么是<code>lambda函数</code>，它有什么好处？</h2><pre class=" language-markdown"><code class="language-markdown">lambda函数是一个可以接收另意多个参数（包括可选参数）并返回单个表达式值的匿名函数。如：lambda x,y:x + y  获取下，y两个参数的和的lambda函数。
 好处：1、lambda函数比较轻便，即用即删除；2、匿名函数，一般用来给filter，map这样的函数式编程服务；3、作为回调函数，传递给某些应用，比如消息处理。
 </code></pre>
-<h2 id="15，分别说说cmp-map-filter的作用？"><a href="#15，分别说说cmp-map-filter的作用？" class="headerlink" title="15，分别说说cmp,map,filter的作用？"></a>15，分别说说<code>cmp</code>,<code>map</code>,<code>filter</code>的作用？</h2><pre class=" language-markdown"><code class="language-markdown">cmp:比较；cmp(a,b);a &lt; b，返回-1；a > b,返回1；a = b,返回0。
+<h2 id="15，分别说说cmp-map-filter的作用？"><a href="#15，分别说说cmp-map-filter的作用？" class="headerlink" title="15，分别说说cmp,map,filter的作用？"></a>15，分别说说<code>cmp</code>,<code>map</code>,<code>filter</code>的作用？</h2><pre class=" language-markdown"><code class="language-markdown">都是高阶函数。
+cmp:比较；cmp(a,b);a &lt; b，返回-1；a > b,返回1；a = b,返回0。
 map:映射；map(func,iterable);将func作用于iterable每个元素上，返回一个可迭代的对象。
 filter:过滤器；filter(func,iterable);将func依次作用于iterable的每个元素，如果返回值为true, 保留元素，否则从iterable里面删除,返回一个迭代器。
 </code></pre>
-<h2 id="16-分别简述一下列表，元组，字典，集合的特点？"><a href="#16-分别简述一下列表，元组，字典，集合的特点？" class="headerlink" title="16,分别简述一下列表，元组，字典，集合的特点？"></a>16,分别简述一下列表，元组，字典，集合的特点？</h2><pre class=" language-markdown"><code class="language-markdown">列表：1、用list()函数或者[]创建，元素之间用逗号分隔；2、列表的元素不需要具有相同的类型；3、可以使用索引来访问元素(有序)；4、可以切片。
+<h2 id="16-分别简述一下列表，元组，字典，集合的特点？"><a href="#16-分别简述一下列表，元组，字典，集合的特点？" class="headerlink" title="16,分别简述一下列表，元组，字典，集合的特点？"></a>16,分别简述一下列表，元组，字典，集合的特点？</h2><pre class=" language-markdown"><code class="language-markdown">上述都是python中常见的数据类型。
+列表：1、用list()函数或者[]创建，元素之间用逗号分隔；2、列表的元素不需要具有相同的类型；3、可以使用索引来访问元素(有序)；4、可以切片。
 元组：1、可以用tuple()函数或者()创建，元素之间用逗号分隔；2、元组的元素不需要具有相同的类型；3、可以使用索引来访问元素；4、可以切片；5、元素的值不可修改。
 字典：1、可以使用dict()函数或者{}创建，元素之间用逗号分隔，键和值之间用冒号隔开；2、元素由键（key）和值（value）组成 ；3、键必须是唯一，值可不唯一(无序)；4、通过键(key)访问元素。
 集合：1、通过set()函数或者{}创建，元素之间用逗号分隔；2、与字典相比少了键；3、不可索引不可切片，应为是无序的；4、不可以有重复元素，常常用作去重操作。
@@ -648,23 +650,25 @@ c <span class="token operator">=</span> reduce<span class="token punctuation">(<
     <div class="row article-row">
         
         <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">本篇</div>
+            <div class="article-badge left-badge text-color">上一篇</div>
             <div class="card">
-                <a href="/2018/11/23/ji-chu-mian-shi-ti/">
+                <a href="/2018/11/29/qian-duan-mian-shi-ti/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="基础面试题">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="前端面试题">
                         
-                        <span class="card-title">基础面试题</span>
+                        <span class="card-title">前端面试题</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">1，python中的关键字yield有什么作用？yield会将该函数包装成生成器，之后可以对该生成器迭代。按照我的理解yield的功能可以当作是暂停与播放。当一个函数运行到yield语句时，函数暂停，返回yield后面的表达式，当使用nex</div>
+                    <div class="summary">1，请描述一下 cookie，sessionStorage和localstorage区别？点击查看详细信息
+cookie是存储于访问者计算机中的变量。每当同一台计算机通过浏览器访问某个页面时都会发送cookie。
+sessionstorag</div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-11-23
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2018-11-29
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -673,15 +677,14 @@ c <span class="token operator">=</span> reduce<span class="token punctuation">(<
                                     python基础
                                 </a>
                             
-                            <a href="/categories/python基础/面试题/" class="post-category" target="_blank">
-                                    面试题
+                            <a href="/categories/python基础/前端/" class="post-category" target="_blank">
+                                    前端
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -689,8 +692,8 @@ c <span class="token operator">=</span> reduce<span class="token punctuation">(<
                         <span class="chip bg-color">python</span>
                     </a>
                     
-                    <a href="/tags/基础/" target="_blank">
-                        <span class="chip bg-color">基础</span>
+                    <a href="/tags/前端/" target="_blank">
+                        <span class="chip bg-color">前端</span>
                     </a>
                     
                 </div>
