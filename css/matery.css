@@ -165,7 +165,7 @@ mark {
 }
 
 .text-color {
-    color: #66CCFF !important;
+    color: #0f9d58 !important;
 }
 
 /*头部导航栏样式*/
@@ -188,7 +188,7 @@ mark {
     position: fixed;
     bottom: 0;
     z-index: 300;
-    background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
+    background: linear-gradient(to right, #66CCFF 0%, #0f9d58 100%);
     opacity: 0.8;
 }
 
@@ -1001,7 +1001,7 @@ table tr:nth-child(2n), thead {
 
 .chip-container .chip:hover {
     color: #fff;
-    background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%) !important;
+    background: linear-gradient(to right, #66CCFF 0%, #0f9d58 100%) !important;
 }
 
 .chip .tag-length {
@@ -1313,7 +1313,7 @@ table tr:nth-child(2n), thead {
     padding: 0;
     color: #fff;
     border: 1px solid #0f9d58;
-    background: radial-gradient(#4cbf30, #0f9d58);;
+    background: radial-gradient(#66CCFF, #0f9d58);;
     font-size: 0.9rem;
     border-radius: 50%;
     box-shadow: 0 4px 6px rgba(50, 50, 93, .21), 0 2px 3px rgba(0, 0, 0, .1);
@@ -1488,8 +1488,8 @@ table tr:nth-child(2n), thead {
 
 .other-skills .chip:hover {
     color: #fff;
-    background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);;
-    border: 1px solid #4cbf30;
+    background: linear-gradient(to right, #66CCFF 0%, #0f9d58 100%);;
+    border: 1px solid #66CCFF;
     box-shadow: 0 5px 5px rgba(0, 0, 0, .25)
 }
 
