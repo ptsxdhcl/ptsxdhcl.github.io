@@ -6,7 +6,7 @@
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
     <meta name="keywords" content="前端面试题, python">
-    <meta name="description" content="1，请描述一下 cookie，sessionStorage和localstorage区别？点击查看详细信息
+    <meta name="description" content="1，请描述一下 cookie，sessionStorage和localstorage区别?点击查看详细信息
 cookie是存储于访问者计算机中的变量。每当同一台计算机通过浏览器访问某个页面时都会发送cookie。
 sessionstorag">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -277,12 +277,12 @@ sessionstorag">
             
             <div class="article-tag">
                 
-                <a href="/tags/python/" target="_blank">
-                    <span class="chip bg-color">python</span>
-                </a>
-                
                 <a href="/tags/前端/" target="_blank">
                     <span class="chip bg-color">前端</span>
+                </a>
+                
+                <a href="/tags/python/" target="_blank">
+                    <span class="chip bg-color">python</span>
                 </a>
                 
             </div>
@@ -292,12 +292,12 @@ sessionstorag">
                 <span class="post-cate">
                     <i class="fa fa-bookmark fa-fw icon-category"></i>
                     
-                    <a href="/categories/python基础/" class="post-category" target="_blank">
-                        python基础
+                    <a href="/categories/python前端/" class="post-category" target="_blank">
+                        python前端
                     </a>
                     
-                    <a href="/categories/python基础/前端/" class="post-category" target="_blank">
-                        前端
+                    <a href="/categories/python前端/面试题/" class="post-category" target="_blank">
+                        面试题
                     </a>
                     
                 </span>
@@ -311,12 +311,13 @@ sessionstorag">
         <hr>
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="1，请描述一下-cookie，sessionStorage和localstorage区别？"><a href="#1，请描述一下-cookie，sessionStorage和localstorage区别？" class="headerlink" title="1，请描述一下 cookie，sessionStorage和localstorage区别？"></a>1，请描述一下 <code>cookie</code>，<code>sessionStorage</code>和<code>localstorage</code>区别？</h2><p><a href="https://geekjc.com/post/58e10a3867d6027b0d916752" target="_blank" rel="noopener">点击查看详细信息</a></p>
+                <h2 id="1，请描述一下-cookie，sessionStorage和localstorage区别"><a href="#1，请描述一下-cookie，sessionStorage和localstorage区别" class="headerlink" title="1，请描述一下 cookie，sessionStorage和localstorage区别?"></a>1，请描述一下 <code>cookie</code>，<code>sessionStorage</code>和<code>localstorage</code>区别?</h2><p><a href="https://geekjc.com/post/58e10a3867d6027b0d916752" target="_blank" rel="noopener">点击查看详细信息</a></p>
 <pre class=" language-markdown"><code class="language-markdown">cookie是存储于访问者计算机中的变量。每当同一台计算机通过浏览器访问某个页面时都会发送cookie。
-sessionstorage和localstorage是HTML5提供的两种在客户端存储数据的方法。
+sessionstorage和localstorage都是HTML5提供的在客户端存储数据的方法。
 sessionstorage是会话存储，localstorage是本地存储。
-三者都是保存在浏览器端且同源的。它们有以下几个区别：
-1、cookies是在浏览器和服务器间来回传递，而且还有路径(path)的概念，可以限制在cookie只属于某个路径下；而sessionstorage和localstorage不会自动把数据发给服务器，仅在本地保存。
+这三者都是保存在客户端端且同源的。
+它们有以下几个区别：
+1、数据与服务器间交互方式不同：cookies是在浏览器和服务器间来回传递，而且还有路径(path)的概念，可以限制在cookie只属于某个路径下；而sessionstorage和localstorage不会自动把数据发给服务器，仅在本地保存。
 2、存储大小限制不同：cookie数据不能超过4k,而sessionstorage和localstorage可以达到5M或更大。
 3、数据有效期不同：cookie只在设置的cookie过期时间之前有效，即使窗口或浏览器关闭；sessionstorage仅在浏览器窗口关闭之前有效；localstorage持久有效，即使浏览器窗口关闭也可以持久保存。
 4、作用域不同：sessionstorage在不同的浏览器窗口是不共享的，即使是同一个页面；而localstorage和cookie是在所有的同源窗口共享。
@@ -327,6 +328,37 @@ sessionstorage是会话存储，localstorage是本地存储。
 2、参数传递方式不同：get请求会将参数跟在url后面进行传递；post请求则是作为http消息的实体内容传递给web服务器，这种传递是用户是不可见的。
 3、数据传输大小不同：get请求的传输数据大小不超过2k，而post要大得多。
 4、安全问题：get请求的数据会被浏览器缓存起来所有相比post请求来说不安全。
+</code></pre>
+<h2 id="3-CSRF是什么，可以做什么-CSRF攻击攻击原理及过程-针对CSRF漏洞防御-django是如何避免的"><a href="#3-CSRF是什么，可以做什么-CSRF攻击攻击原理及过程-针对CSRF漏洞防御-django是如何避免的" class="headerlink" title="3,CSRF是什么，可以做什么,CSRF攻击攻击原理及过程,针对CSRF漏洞防御,django是如何避免的?"></a>3,CSRF是什么，可以做什么,CSRF攻击攻击原理及过程,针对CSRF漏洞防御,django是如何避免的?</h2><p><a href="https://www.cnblogs.com/dachenzi/p/8613337.html" target="_blank" rel="noopener">点击查看详情</a></p>
+<pre class=" language-markdown"><code class="language-markdown">一、CSRF是跨站请求伪造，是对网站的恶意利用。
+
+二、可以做什么：攻击者盗用你的身份，以你的身份发送恶意请求，但对服务器来说这个请求是合法的。比如以你的名义发邮件、购买商品等。
+
+三、CSRF攻击攻击原理及过程：
+假设 网站A为存在CSFRF漏洞的网站，网站B为攻击者构建的恶意网站，用户C为网站A的合法用户。
+那么分为五步攻击：
+1.用户C打开浏览器，访问网站A，输入用户名和密码登录A；
+2.用户信息验证成功，网站A产生cookie信息返回给浏览器，此时用户登陆成功，可以正常发送请求给网站A;
+3.用户在未有退出网站A之前，在同一个浏览器中打开一个TAB页面访问网站B；
+4.网站B接收到用户请求后，返回一些攻击性代码，并发出一个请求访问网站A;
+5.浏览器在接收到这些攻击性代码后，根据网站B的请求在用户不知情的情况携带cookie信息向网站A发出请求。网站A并不知道该请求是由网站B发起的，所以会根据用户C的cookie信息以C的名义处理请求，导致网站B的代码被执行。
+
+四、防御CSRF攻击：
+1.验证HTTP Referer字段；
+2.在请求地址中添加token并验证；
+3.在HTTP头中自定义属性并验证。
+
+五、Django是如何避免的：Django中有两种方式传递和验证CSRF token。
+1.在form表单中添加{% csrf<span class="token italic"><span class="token punctuation">_</span>token %} 来渲染服务端返回的csrf<span class="token punctuation">_</span></span>token；
+2.在ajax提交中为headers来定制请求头，这时请求头的k键(key)必须为X-CSRFtoken。
+</code></pre>
+<h2 id="4-XSS是什么？"><a href="#4-XSS是什么？" class="headerlink" title="4,XSS是什么？"></a>4,XSS是什么？</h2><p><a href="https://tech.meituan.com/fe_security.html" target="_blank" rel="noopener">点击查看详情</a></p>
+<pre class=" language-markdown"><code class="language-markdown">XSS是跨站脚本攻击，也叫做代码注入攻击。它的本质是恶意代码未经过过滤，与正常代码混在一起被浏览器一起执行。
+
+如何防范XSS:
+1.过滤用户输入的html标签内容；
+2.对用户的html标签进行转义；
+Django中默认对所有输出的html标签内容进行转义。
 </code></pre>
 
             </div>
@@ -498,7 +530,7 @@ sessionstorage是会话存储，localstorage是本地存储。
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">1，请描述一下 cookie，sessionStorage和localstorage区别？点击查看详细信息
+                    <div class="summary">1，请描述一下 cookie，sessionStorage和localstorage区别?点击查看详细信息
 cookie是存储于访问者计算机中的变量。每当同一台计算机通过浏览器访问某个页面时都会发送cookie。
 sessionstorag</div>
                     <div class="publish-info">
@@ -509,12 +541,12 @@ sessionstorag</div>
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/python基础/" class="post-category" target="_blank">
-                                    python基础
+                            <a href="/categories/python前端/" class="post-category" target="_blank">
+                                    python前端
                                 </a>
                             
-                            <a href="/categories/python基础/前端/" class="post-category" target="_blank">
-                                    前端
+                            <a href="/categories/python前端/面试题/" class="post-category" target="_blank">
+                                    面试题
                                 </a>
                             
                             
@@ -525,12 +557,12 @@ sessionstorag</div>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/python/" target="_blank">
-                        <span class="chip bg-color">python</span>
-                    </a>
-                    
                     <a href="/tags/前端/" target="_blank">
                         <span class="chip bg-color">前端</span>
+                    </a>
+                    
+                    <a href="/tags/python/" target="_blank">
+                        <span class="chip bg-color">python</span>
                     </a>
                     
                 </div>
@@ -552,7 +584,7 @@ sessionstorag</div>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">1，python中的关键字yield有什么作用？yield会将该函数包装成生成器，之后可以对该生成器迭代。按照我的理解yield的功能可以当作是暂停与播放。当一个函数运行到yield语句时，函数暂停，返回yield后面的表达式，当使用nex</div>
+                    <div class="summary">1，python中的关键字yield有什么作用？yield会将该函数包装成生成器，之后可以对该生成器迭代。当一个函数运行到yield语句时，函数暂停，返回yield后面的表达式，当使用next(),send()方法时让原函数在暂停的地方继续</div>
                     <div class="publish-info">
                             <span class="publish-date">
                                 <i class="fa fa-clock-o fa-fw icon-date"></i>2018-11-23

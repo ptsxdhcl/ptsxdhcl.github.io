@@ -6,7 +6,7 @@
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
     <meta name="keywords" content="基础面试题, python">
-    <meta name="description" content="1，python中的关键字yield有什么作用？yield会将该函数包装成生成器，之后可以对该生成器迭代。按照我的理解yield的功能可以当作是暂停与播放。当一个函数运行到yield语句时，函数暂停，返回yield后面的表达式，当使用nex">
+    <meta name="description" content="1，python中的关键字yield有什么作用？yield会将该函数包装成生成器，之后可以对该生成器迭代。当一个函数运行到yield语句时，函数暂停，返回yield后面的表达式，当使用next(),send()方法时让原函数在暂停的地方继续">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -309,9 +309,9 @@
         <hr>
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="1，python中的关键字yield有什么作用？"><a href="#1，python中的关键字yield有什么作用？" class="headerlink" title="1，python中的关键字yield有什么作用？"></a>1，<code>python</code>中的关键字<code>yield</code>有什么作用？</h2><pre class=" language-markdown"><code class="language-markdown">yield会将该函数包装成生成器，之后可以对该生成器迭代。按照我的理解yield的功能可以当作是暂停与播放。当一个函数运行到yield语句时，函数暂停，返回yield后面的表达式，当使用next(),send()方法时让原函数在暂停的地方继续执行。
+                <h2 id="1，python中的关键字yield有什么作用？"><a href="#1，python中的关键字yield有什么作用？" class="headerlink" title="1，python中的关键字yield有什么作用？"></a>1，<code>python</code>中的关键字<code>yield</code>有什么作用？</h2><pre class=" language-markdown"><code class="language-markdown">yield会将该函数包装成生成器，之后可以对该生成器迭代。当一个函数运行到yield语句时，函数暂停，返回yield后面的表达式，当使用next(),send()方法时让原函数在暂停的地方继续执行。
 </code></pre>
-<h2 id="2，这两个参数时什么意思-args-kwargs-我们为什么要使用他们？"><a href="#2，这两个参数时什么意思-args-kwargs-我们为什么要使用他们？" class="headerlink" title="2，这两个参数时什么意思:*args,**kwargs?我们为什么要使用他们？"></a>2，这两个参数时什么意思:<code>*args</code>,<code>**kwargs</code>?我们为什么要使用他们？</h2><pre class=" language-markdown"><code class="language-markdown">*args 和 <span class="token bold"><span class="token punctuation">**</span>kwargs通常使用在函数定义里，*args允许函数传入不定量个数的非关键字参数，以元组形式接收，是不定长参数；<span class="token punctuation">**</span></span>kwargs允许函数传入不定量个数的关键字参数，以字典形式接收，是不定长关键字参数。
+<h2 id="2，这两个参数时什么意思-args-kwargs-我们为什么要使用他们？"><a href="#2，这两个参数时什么意思-args-kwargs-我们为什么要使用他们？" class="headerlink" title="2，这两个参数时什么意思:*args,**kwargs?我们为什么要使用他们？"></a>2，这两个参数时什么意思:<code>*args</code>,<code>**kwargs</code>?我们为什么要使用他们？</h2><pre class=" language-markdown"><code class="language-markdown"><span class="token code keyword">`*args`</span> 和 <span class="token code keyword">`**kwargs`</span>通常使用在函数定义里，<span class="token code keyword">`*args`</span>是不定长参数，允许函数传入不定量个数的非关键字参数，以元组形式接收；<span class="token code keyword">`**kwargs`</span>是不定长关键字参数，允许函数传入不定量个数的关键字参数，以字典形式接收。同时使用两者时，<span class="token code keyword">`*args`</span>参数必须在<span class="token code keyword">`**kwargs`</span>前面。
 </code></pre>
 <h2 id="3-python主要的内置数据类型都有哪些？print-dir-39-a-39-的输出是什么？"><a href="#3-python主要的内置数据类型都有哪些？print-dir-39-a-39-的输出是什么？" class="headerlink" title="3,python主要的内置数据类型都有哪些？print(dir(&#39;a&#39;))的输出是什么？"></a>3,<code>python</code>主要的内置数据类型都有哪些？<code>print(dir(&#39;a&#39;))</code>的输出是什么？</h2><pre class=" language-markdown"><code class="language-markdown">字符串型
 元组
@@ -323,9 +323,9 @@ print(dir('a'))的输出是关键字参数
 
 ['<span class="token bold"><span class="token punctuation">__</span>add<span class="token punctuation">__</span></span>', '<span class="token bold"><span class="token punctuation">__</span>class<span class="token punctuation">__</span></span>', '<span class="token bold"><span class="token punctuation">__</span>contains<span class="token punctuation">__</span></span>', '<span class="token bold"><span class="token punctuation">__</span>delattr<span class="token punctuation">__</span></span>', '<span class="token bold"><span class="token punctuation">__</span>dir<span class="token punctuation">__</span></span>', '<span class="token bold"><span class="token punctuation">__</span>doc<span class="token punctuation">__</span></span>', '<span class="token bold"><span class="token punctuation">__</span>eq<span class="token punctuation">__</span></span>', '<span class="token bold"><span class="token punctuation">__</span>format<span class="token punctuation">__</span></span>', '<span class="token bold"><span class="token punctuation">__</span>ge<span class="token punctuation">__</span></span>', '<span class="token bold"><span class="token punctuation">__</span>getattribute<span class="token punctuation">__</span></span>', '<span class="token bold"><span class="token punctuation">__</span>getitem<span class="token punctuation">__</span></span>', '<span class="token bold"><span class="token punctuation">__</span>getnewargs<span class="token punctuation">__</span></span>', '<span class="token bold"><span class="token punctuation">__</span>gt<span class="token punctuation">__</span></span>', '<span class="token bold"><span class="token punctuation">__</span>hash<span class="token punctuation">__</span></span>', '<span class="token bold"><span class="token punctuation">__</span>init<span class="token punctuation">__</span></span>', '<span class="token bold"><span class="token punctuation">__</span>init_subclass<span class="token punctuation">__</span></span>', '<span class="token bold"><span class="token punctuation">__</span>iter<span class="token punctuation">__</span></span>', '<span class="token bold"><span class="token punctuation">__</span>le<span class="token punctuation">__</span></span>', '<span class="token bold"><span class="token punctuation">__</span>len<span class="token punctuation">__</span></span>', '<span class="token bold"><span class="token punctuation">__</span>lt<span class="token punctuation">__</span></span>', '<span class="token bold"><span class="token punctuation">__</span>mod<span class="token punctuation">__</span></span>', '<span class="token bold"><span class="token punctuation">__</span>mul<span class="token punctuation">__</span></span>', '<span class="token bold"><span class="token punctuation">__</span>ne<span class="token punctuation">__</span></span>', '<span class="token bold"><span class="token punctuation">__</span>new<span class="token punctuation">__</span></span>', '<span class="token bold"><span class="token punctuation">__</span>reduce<span class="token punctuation">__</span></span>', '<span class="token bold"><span class="token punctuation">__</span>reduce_ex<span class="token punctuation">__</span></span>', '<span class="token bold"><span class="token punctuation">__</span>repr<span class="token punctuation">__</span></span>', '<span class="token bold"><span class="token punctuation">__</span>rmod<span class="token punctuation">__</span></span>', '<span class="token bold"><span class="token punctuation">__</span>rmul<span class="token punctuation">__</span></span>', '<span class="token bold"><span class="token punctuation">__</span>setattr<span class="token punctuation">__</span></span>', '<span class="token bold"><span class="token punctuation">__</span>sizeof<span class="token punctuation">__</span></span>', '<span class="token bold"><span class="token punctuation">__</span>str<span class="token punctuation">__</span></span>', '<span class="token bold"><span class="token punctuation">__</span>subclasshook<span class="token punctuation">__</span></span>', 'capitalize', 'casefold', 'center', 'count', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'format_map', 'index', 'isalnum', 'isalpha', 'isdecimal', 'isdigit', 'isidentifier', 'islower', 'isnumeric', 'isprintable', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'maketrans', 'partition', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
 </code></pre>
-<h2 id="4，对比-args-和-kwargs-new-和-init-is和-的区别"><a href="#4，对比-args-和-kwargs-new-和-init-is和-的区别" class="headerlink" title="4，对比:*args 和**kwargs,__new__和__init__,is和==的区别"></a>4，对比:<code>*args</code> 和<code>**kwargs</code>,<code>__new__</code>和<code>__init__</code>,<code>is</code>和<code>==</code>的区别</h2><pre class=" language-markdown"><code class="language-markdown">*args和<span class="token bold"><span class="token punctuation">**</span>kwargs：*args表示另何多个无名参数(不定长参数)，它是一个元组；<span class="token punctuation">**</span></span>kwargs表示关键字参数(不定长关键字参数)，它是一个字典。同时使用两者时，<span class="token italic"><span class="token punctuation">*</span>args参数必须在<span class="token punctuation">*</span></span>*kwargs前面。
+<h2 id="4，对比-args-和-kwargs-new-和-init-is和-的区别"><a href="#4，对比-args-和-kwargs-new-和-init-is和-的区别" class="headerlink" title="4，对比:*args 和**kwargs,__new__和__init__,is和==的区别"></a>4，对比:<code>*args</code> 和<code>**kwargs</code>,<code>__new__</code>和<code>__init__</code>,<code>is</code>和<code>==</code>的区别</h2><pre class=" language-markdown"><code class="language-markdown"><span class="token code keyword">`*args `</span>和 <span class="token code keyword">`**kwargs`</span>通常使用在函数定义里，<span class="token code keyword">`*args`</span>是不定长参数，允许函数传入不定量个数的非关键字参数，以元组形式接收；<span class="token code keyword">`**kwargs`</span>是不定长关键字参数，允许函数传入不定量个数的关键字参数，以字典形式接收。同时使用两者时，<span class="token code keyword">`*args`</span>参数必须在<span class="token code keyword">`**kwargs`</span>前面。
 <span class="token bold"><span class="token punctuation">__</span>new<span class="token punctuation">__</span></span>和<span class="token bold"><span class="token punctuation">__</span>init<span class="token punctuation">__</span></span>:<span class="token bold"><span class="token punctuation">__</span>init<span class="token punctuation">__</span></span>是当实例对象创建完成后被调用的，然后设置对象属性的初始值；<span class="token bold"><span class="token punctuation">__</span>new<span class="token punctuation">__</span></span>是在实例创建前被调用，它的任务就是创建实例然后返回该实例，是个静态方法。也就是说，<span class="token bold"><span class="token punctuation">__</span>new<span class="token punctuation">__</span></span>在<span class="token bold"><span class="token punctuation">__</span>init<span class="token punctuation">__</span></span>之前被调用，<span class="token bold"><span class="token punctuation">__</span>new<span class="token punctuation">__</span></span>的返回值(实例)将传递给<span class="token bold"><span class="token punctuation">__</span>init<span class="token punctuation">__</span></span>方法的第一个参数然后<span class="token bold"><span class="token punctuation">__</span>init<span class="token punctuation">__</span></span>给这个实例设置参数。
-is和==:都是对对象进行比较判断。is也被叫做同一性运算符，判断的是id是否相同；==是python标准操作符中的比较操作符，用来比较判断两个对象的值是否相等。
+is和==:都是对对象进行比较判断，返回的都是布尔值。is也被叫做同一性运算符，判断的是id是否相同；==是python标准操作符中的比较操作符，用来比较判断两个对象的值是否相等。
 </code></pre>
 <h2 id="5，装饰器-staticmethod和-classmethod-property的作用？"><a href="#5，装饰器-staticmethod和-classmethod-property的作用？" class="headerlink" title="5，装饰器@staticmethod和@classmethod,@property的作用？"></a>5，装饰器<code>@staticmethod</code>和<code>@classmethod</code>,<code>@property</code>的作用？</h2><pre class=" language-markdown"><code class="language-markdown">@classmethod：类静态方法，与实例方法的区别是没有self参数，并且可以在类不进行实例化的情况下使用；@staticmethod:类方法，与实例化方法的区别在于接收的第一个参数不是self(类实例的指针)，而是cls(当前类的具体类型)；@property:属性方法，将一个类方法转为类属性来使用，只读属性。
 </code></pre>
@@ -335,7 +335,7 @@ iteritems():与items()作用大致相同，不过它的返回值是一个生成�
 </code></pre>
 <h2 id="7，python中的变量作用域-变量查找顺序-？"><a href="#7，python中的变量作用域-变量查找顺序-？" class="headerlink" title="7，python中的变量作用域(变量查找顺序)？"></a>7，python中的变量作用域(变量查找顺序)？</h2><pre class=" language-markdown"><code class="language-markdown">变量作用域是LEGB顺序。
   1，什么是LEGB？
-  L:local,函数内部作用域
+  L:local,函数内部作用域(局部作用域)
   E:enclosing,函数内部与内嵌函数之间
   G:global,全局作用域
   B:build-in,内置作用域
@@ -389,12 +389,13 @@ map:映射；map(func,iterable);将func作用于iterable每个元素上，返回
 filter:过滤器；filter(func,iterable);将func依次作用于iterable的每个元素，如果返回值为true, 保留元素，否则从iterable里面删除,返回一个迭代器。
 </code></pre>
 <h2 id="16-分别简述一下列表，元组，字典，集合的特点？"><a href="#16-分别简述一下列表，元组，字典，集合的特点？" class="headerlink" title="16,分别简述一下列表，元组，字典，集合的特点？"></a>16,分别简述一下列表，元组，字典，集合的特点？</h2><pre class=" language-markdown"><code class="language-markdown">上述都是python中常见的数据类型。
-列表：1、用list()函数或者[]创建，元素之间用逗号分隔；2、列表的元素不需要具有相同的类型；3、可以使用索引来访问元素(有序)；4、可以切片。
-元组：1、可以用tuple()函数或者()创建，元素之间用逗号分隔；2、元组的元素不需要具有相同的类型；3、可以使用索引来访问元素；4、可以切片；5、元素的值不可修改。
+列表：1、用list()函数或者[]创建，元素之间用逗号分隔；2、列表的元素不需要具有相同的类型；3、可以使用索引来访问元素(有序)；4、可以切片操作。
+元组：1、可以用tuple()函数或者()创建，元素之间用逗号分隔；2、元组的元素不需要具有相同的类型；3、可以使用索引来访问元素；4、可以切片操作；5、元素的值不可修改。
 字典：1、可以使用dict()函数或者{}创建，元素之间用逗号分隔，键和值之间用冒号隔开；2、元素由键（key）和值（value）组成 ；3、键必须是唯一，值可不唯一(无序)；4、通过键(key)访问元素。
 集合：1、通过set()函数或者{}创建，元素之间用逗号分隔；2、与字典相比少了键；3、不可索引不可切片，应为是无序的；4、不可以有重复元素，常常用作去重操作。
 </code></pre>
-<h2 id="17-简述装饰器？"><a href="#17-简述装饰器？" class="headerlink" title="17,简述装饰器？"></a>17,简述装饰器？</h2><pre class=" language-markdown"><code class="language-markdown">装饰器本质上是一个python函数，它可以让其他函数在不需要任何代码变动的前提下增加额外功能，它的返回值也是一个函数。因为本质上是一个函数，所以可以传参数。
+<h2 id="17-简述装饰器？"><a href="#17-简述装饰器？" class="headerlink" title="17,简述装饰器？"></a>17,简述装饰器？</h2><pre class=" language-markdown"><code class="language-markdown">装饰器本质上是一个python函数，所以可以传参数，并且它的返回值也是一个函数。
+装饰器的作用是可以让其他函数在不需要任何代码变动的前提下增加额外功能。
 功能：1、引入日志；2、统计函数执行时间；3、执行函数前预备处理；4、执行函数后清理功能；5、django中用到的权限验证；6、缓存中也用到了。
 </code></pre>
 <h2 id="18，简述你对迭代器，生成器的理解；列表，字典，字符串是可迭代对象还是迭代器？"><a href="#18，简述你对迭代器，生成器的理解；列表，字典，字符串是可迭代对象还是迭代器？" class="headerlink" title="18，简述你对迭代器，生成器的理解；列表，字典，字符串是可迭代对象还是迭代器？"></a>18，简述你对迭代器，生成器的理解；列表，字典，字符串是可迭代对象还是迭代器？</h2><pre class=" language-markdown"><code class="language-markdown">迭代器：迭代器是指可以使用next()方法回调的对象(返回迭代的每一步，相当for循环，如果超出边界会抛出StopIteration异常)；也可以使用iter()方法将可迭代对象转换为迭代器。
@@ -411,11 +412,11 @@ filter:过滤器；filter(func,iterable);将func依次作用于iterable的每个
 </code></pre>
 <h2 id="21-一行代码写出九九乘法表。"><a href="#21-一行代码写出九九乘法表。" class="headerlink" title="21,一行代码写出九九乘法表。"></a>21,一行代码写出九九乘法表。</h2><pre class=" language-python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'\n'</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'\t'</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span><span class="token punctuation">[</span> <span class="token string">"%s*%s=%s"</span><span class="token operator">%</span><span class="token punctuation">(</span>j<span class="token punctuation">,</span>i<span class="token punctuation">,</span>i<span class="token operator">*</span>j<span class="token punctuation">)</span><span class="token keyword">for</span> j <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 </code></pre>
-<h2 id="22-什么是代码块？"><a href="#22-什么是代码块？" class="headerlink" title="22,什么是代码块？"></a>22,什么是代码块？</h2><pre class=" language-markdown"><code class="language-markdown">以冒号作为开始，用缩进划分相同的作用域，这样的结构称之为代码块，是一个整体。也可以称之为是一组由代码构成的功能“单元”。一个代码块可以单独运行。比如一个函数、一个类定义、一个模块等。
+<h2 id="22-什么是代码块？"><a href="#22-什么是代码块？" class="headerlink" title="22,什么是代码块？"></a>22,什么是代码块？</h2><pre class=" language-markdown"><code class="language-markdown">代码块是一组由代码构成的功能“单元”，以冒号作为开始，用缩进划分相同的作用域，它是一个整体。一个代码块可以单独运行。比如一个函数、一个类定义、一个模块等。
 </code></pre>
-<h2 id="23，变量是什么？"><a href="#23，变量是什么？" class="headerlink" title="23，变量是什么？"></a>23，变量是什么？</h2><pre class=" language-markdown"><code class="language-markdown">可以改变的量，实际上是内存中一块存储空间。变量由以下几个命名规范：1、尽量不要使用中文；2、可以使用数字，字母，下划线；3、数字不能开头；4、下划线不能开头；5、严格区分大小写；6、变量要具有描述性；7、不能使用关键字作为变量。
+<h2 id="23，变量是什么？"><a href="#23，变量是什么？" class="headerlink" title="23，变量是什么？"></a>23，变量是什么？</h2><pre class=" language-markdown"><code class="language-markdown">变量是可以改变的量，实际上是内存中一块存储空间。变量由以下几个命名规范：1、尽量不要使用中文；2、可以使用数字，字母，下划线；3、数字不能开头；4、下划线不能开头；5、严格区分大小写；6、变量要具有描述性；7、不能使用关键字作为变量。
 </code></pre>
-<h2 id="24，全局变量和局部变量的区别，如何在一个函数里给一个全局变量赋值？"><a href="#24，全局变量和局部变量的区别，如何在一个函数里给一个全局变量赋值？" class="headerlink" title="24，全局变量和局部变量的区别，如何在一个函数里给一个全局变量赋值？"></a>24，全局变量和局部变量的区别，如何在一个函数里给一个全局变量赋值？</h2><pre class=" language-markdown"><code class="language-markdown">全局变量与局部变量两个的本质区别就是作用域。全局变量在整个py文件中申明，全局范围内都可以访问；局部变量是在某个函数中申明，只在该函数调用时可以访问。
+<h2 id="24，全局变量和局部变量的区别，如何在一个函数里给一个全局变量赋值？"><a href="#24，全局变量和局部变量的区别，如何在一个函数里给一个全局变量赋值？" class="headerlink" title="24，全局变量和局部变量的区别，如何在一个函数里给一个全局变量赋值？"></a>24，全局变量和局部变量的区别，如何在一个函数里给一个全局变量赋值？</h2><pre class=" language-markdown"><code class="language-markdown">全局变量与局部变量两个的本质区别就是作用域的不同。全局变量在整个py文件中申明，全局范围内都可以访问；局部变量是在某个函数中申明，只在该函数调用时可以访问。
 使用global关键字可以给全局变量赋值。
 
 num1 = 1
@@ -491,6 +492,30 @@ b <span class="token operator">=</span> filter<span class="token punctuation">(<
 <span class="token keyword">from</span> functools <span class="token keyword">import</span> reduce
 c <span class="token operator">=</span> reduce<span class="token punctuation">(</span><span class="token keyword">lambda</span> x<span class="token punctuation">,</span>y <span class="token punctuation">:</span>x<span class="token operator">*</span>y<span class="token punctuation">,</span>range<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">101</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>int<span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<h2 id="36，深拷贝和浅拷贝的区别？"><a href="#36，深拷贝和浅拷贝的区别？" class="headerlink" title="36，深拷贝和浅拷贝的区别？"></a>36，深拷贝和浅拷贝的区别？</h2><ul>
+<li>浅拷贝(copy):拷贝父对象，不会拷贝对象内部的子对象。</li>
+<li>深拷贝(deepcopy): copy 模块的 deepcopy 方法，完全拷贝了父对象及其子对象。</li>
+</ul>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> copy
+a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'b'</span><span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token comment" spellcheck="true">#原始对象</span>
+
+b <span class="token operator">=</span> a                       <span class="token comment" spellcheck="true">#赋值，传对象的引用</span>
+c <span class="token operator">=</span> copy<span class="token punctuation">.</span>copy<span class="token punctuation">(</span>a<span class="token punctuation">)</span>            <span class="token comment" spellcheck="true">#对象拷贝，浅拷贝</span>
+d <span class="token operator">=</span> copy<span class="token punctuation">.</span>deepcopy<span class="token punctuation">(</span>a<span class="token punctuation">)</span>        <span class="token comment" spellcheck="true">#对象拷贝，深拷贝</span>
+
+a<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span>                 <span class="token comment" spellcheck="true">#修改对象a</span>
+a<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">'c'</span><span class="token punctuation">)</span>            <span class="token comment" spellcheck="true">#修改对象a中的['a', 'b']数组对象</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span> <span class="token string">'a = '</span><span class="token punctuation">,</span> a <span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span> <span class="token string">'b = '</span><span class="token punctuation">,</span> b <span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span> <span class="token string">'c = '</span><span class="token punctuation">,</span> c <span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span> <span class="token string">'d = '</span><span class="token punctuation">,</span> d <span class="token punctuation">)</span>
+</code></pre>
+<pre class=" language-python"><code class="language-python">a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token string">'b'</span><span class="token punctuation">,</span><span class="token string">'c'</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">]</span>
+b <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token string">'b'</span><span class="token punctuation">,</span><span class="token string">'c'</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">]</span>
+c <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'b'</span><span class="token punctuation">,</span><span class="token string">'c'</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+d <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token string">'b'</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+<span class="token comment" spellcheck="true"># 浅拷贝时，列表外层不变，内层跟着改变；深拷贝时，内外层都不变，拷贝的对象和原列表无关</span>
 </code></pre>
 
             </div>
@@ -662,7 +687,7 @@ c <span class="token operator">=</span> reduce<span class="token punctuation">(<
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">1，请描述一下 cookie，sessionStorage和localstorage区别？点击查看详细信息
+                    <div class="summary">1，请描述一下 cookie，sessionStorage和localstorage区别?点击查看详细信息
 cookie是存储于访问者计算机中的变量。每当同一台计算机通过浏览器访问某个页面时都会发送cookie。
 sessionstorag</div>
                     <div class="publish-info">
@@ -673,12 +698,12 @@ sessionstorag</div>
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/python基础/" class="post-category" target="_blank">
-                                    python基础
+                            <a href="/categories/python前端/" class="post-category" target="_blank">
+                                    python前端
                                 </a>
                             
-                            <a href="/categories/python基础/前端/" class="post-category" target="_blank">
-                                    前端
+                            <a href="/categories/python前端/面试题/" class="post-category" target="_blank">
+                                    面试题
                                 </a>
                             
                             
@@ -688,12 +713,12 @@ sessionstorag</div>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/python/" target="_blank">
-                        <span class="chip bg-color">python</span>
-                    </a>
-                    
                     <a href="/tags/前端/" target="_blank">
                         <span class="chip bg-color">前端</span>
+                    </a>
+                    
+                    <a href="/tags/python/" target="_blank">
+                        <span class="chip bg-color">python</span>
                     </a>
                     
                 </div>
