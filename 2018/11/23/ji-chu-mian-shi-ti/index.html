@@ -346,9 +346,22 @@ iteritems():与items()作用大致相同，不过它的返回值是一个生成�
 </code></pre>
 <h2 id="8，描述python中的进程，线程，协程？"><a href="#8，描述python中的进程，线程，协程？" class="headerlink" title="8，描述python中的进程，线程，协程？"></a>8，描述<code>python</code>中的进程，线程，协程？</h2><pre class=" language-markdown"><code class="language-markdown">进程:对于操作系统而已，一个任务就是一个进程，每个进程都有自己的堆栈段，代码段和数据段，以保存状态下接着执行，进程是操作系统资源分配的最小单位。
 线程:一个进程内部可以同时运行多个子任务，我们把进程的这些子任务叫做线程。
-进程和线程的区别:(1),进程是系统进行资源分配和调度的一个独立单位，线程是进程的一个实体，是CPU调度和分派的基本单位，它是比进程更小的能独立运行的基本单位；(2),一个程序至少一个进程，一个进程至少一个线程；(3),线程的划分尺度小于进程(资源比进程少),使的多线程程序并发高；(4),进程在执行过程中拥有独立的内存单元，而多个线程共享内存，从而极大的提高程序的运行效率；(5),线程不能够独立执行，必须存在在进程中；(6),线程执行开销小，但不利于资源的管理和保护，进程相反。
 
-协程:协程又叫做微线程，一种用户态的轻量级线程，协程拥有自己的寄存器上下文和栈。优点：a,无需线程上下文切换的开销，协程避免了无意义的调度，由此可以提高性能。b,无需原子操作锁定及同步开销。c,方便切换控制流，简化编程模型。d,高并发+高拓展性+低成本。缺点: a,无法利用多核资源。b,进行阻塞操作会阻塞掉整个程序。
+进程和线程的区别:
+(1),进程是系统进行资源分配和调度的一个独立单位，线程是进程的一个实体，是CPU调度和分派的基本单位，它是比进程更小的能独立运行的基本单位；
+(2),一个程序至少一个进程，一个进程至少一个线程；
+(3),线程的划分尺度小于进程(资源比进程少),使的多线程程序并发高；
+(4),进程在执行过程中拥有独立的内存单元，而多个线程共享内存，从而极大的提高程序的运行效率；
+(5),线程不能够独立执行，必须存在在进程中；
+(6),线程执行开销小，但不利于资源的管理和保护，进程相反。
+
+协程:协程又叫做微线程，一种用户态的轻量级线程，协程拥有自己的寄存器上下文和栈。
+优点： a,无需线程上下文切换的开销，协程避免了无意义的调度，由此可以提高性能。
+<span class="token code keyword">      b,无需原子操作锁定及同步开销。</span>
+<span class="token code keyword">      c,方便切换控制流，简化编程模型。</span>
+<span class="token code keyword">      d,高并发+高拓展性+低成本。</span>
+缺点: a,无法利用多核资源。
+<span class="token code keyword">      b,进行阻塞操作会阻塞掉整个程序。</span>
 </code></pre>
 <h2 id="9，简单比较一下python，java，javascript，如果您对后两者不熟悉，请和您熟悉的另一种语言比较。-不超过三句话"><a href="#9，简单比较一下python，java，javascript，如果您对后两者不熟悉，请和您熟悉的另一种语言比较。-不超过三句话" class="headerlink" title="9，简单比较一下python，java，javascript，如果您对后两者不熟悉，请和您熟悉的另一种语言比较。(不超过三句话)"></a>9，简单比较一下<code>python</code>，<code>java</code>，<code>javascript</code>，如果您对后两者不熟悉，请和您熟悉的另一种语言比较。(不超过三句话)</h2><pre class=" language-markdown"><code class="language-markdown">python 既有强类属性又有弱类属性；1、面向对象的编程，2、无需编译，提高开发效率，3、免费，开源，功能强大，4、简单易学，容易上手。
 js   弱类
@@ -363,20 +376,20 @@ sys:sys模块可供访问由解释器使用或维护的变量与解释器进行�
 
 re.compile是将正则表达式编译成一个对象，加快匹配速度，并且可以重复使用。
 </code></pre>
-<h2 id="12，python匹配HTML-tag的时候，-lt-gt-和-lt-gt-有什么区别？"><a href="#12，python匹配HTML-tag的时候，-lt-gt-和-lt-gt-有什么区别？" class="headerlink" title="12，python匹配HTML tag的时候，&lt;.\*&gt;和&lt;.\*?&gt;有什么区别？"></a>12，<code>python</code>匹配<code>HTML tag</code>的时候，<code>&lt;.\*&gt;</code>和<code>&lt;.\*?&gt;</code>有什么区别？</h2><pre class=" language-markdown"><code class="language-markdown">&lt;.<span class="token italic"><span class="token punctuation">*</span>>:贪婪模式；&lt;.<span class="token punctuation">*</span></span>?>:非贪婪模式。贪婪模式与非贪婪模式影响的是被量词修饰的子表达式的匹配行为，贪婪模式是在整个表达式匹配成功的前提下尽可能多的匹配，而非贪婪模式是尽可能少的匹配。非贪婪模式只被部分NFA引擎支持。
+<h2 id="12，python匹配HTML-tag的时候，-lt-gt-和-lt-gt-有什么区别？"><a href="#12，python匹配HTML-tag的时候，-lt-gt-和-lt-gt-有什么区别？" class="headerlink" title="12，python匹配HTML tag的时候，&lt;.*&gt;和&lt;.*?&gt;有什么区别？"></a>12，<code>python</code>匹配<code>HTML tag</code>的时候，<code>&lt;.*&gt;</code>和<code>&lt;.*?&gt;</code>有什么区别？</h2><pre class=" language-markdown"><code class="language-markdown">&lt;.<span class="token italic"><span class="token punctuation">*</span>>:贪婪模式；&lt;.<span class="token punctuation">*</span></span>?>:非贪婪模式。贪婪模式与非贪婪模式影响的是被量词修饰的子表达式的匹配行为，贪婪模式是在整个表达式匹配成功的前提下尽可能多的匹配，而非贪婪模式是尽可能少的匹配。非贪婪模式只被部分NFA引擎支持。
 </code></pre>
 <h2 id="13，python是如何进行内存管理的？"><a href="#13，python是如何进行内存管理的？" class="headerlink" title="13，python是如何进行内存管理的？"></a>13，<code>python</code>是如何进行内存管理的？</h2><pre class=" language-markdown"><code class="language-markdown">python内部使用引用计数，来保持追踪内存中的对象，python内部记录了对象有多少个引用，即引用计数，当对象被创建时就创建一个引用计数，当对象不再需要时，这个对象的引用计数为0，它被垃圾回收。
 </code></pre>
 <h2 id="14，什么是lambda函数，它有什么好处？"><a href="#14，什么是lambda函数，它有什么好处？" class="headerlink" title="14，什么是lambda函数，它有什么好处？"></a>14，什么是<code>lambda函数</code>，它有什么好处？</h2><pre class=" language-markdown"><code class="language-markdown">lambda函数是一个可以接收另意多个参数（包括可选参数）并返回单个表达式值的匿名函数。如：lambda x,y:x + y  获取下，y两个参数的和的lambda函数。
 好处：1、lambda函数比较轻便，即用即删除；2、匿名函数，一般用来给filter，map这样的函数式编程服务；3、作为回调函数，传递给某些应用，比如消息处理。
 </code></pre>
-<h2 id="15，分别说说cmp-map-filter的作用？"><a href="#15，分别说说cmp-map-filter的作用？" class="headerlink" title="15，分别说说cmp,map,filter的作用？"></a>15，分别说说<code>cmp</code>,<code>map</code>,<code>filter</code>的作用？</h2><pre class=" language-markdown"><code class="language-markdown">cmp:比较；cmp(a,b);a<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>b，返回-1；a</span><span class="token punctuation">></span></span>b,返回1；a=b,返回0。
+<h2 id="15，分别说说cmp-map-filter的作用？"><a href="#15，分别说说cmp-map-filter的作用？" class="headerlink" title="15，分别说说cmp,map,filter的作用？"></a>15，分别说说<code>cmp</code>,<code>map</code>,<code>filter</code>的作用？</h2><pre class=" language-markdown"><code class="language-markdown">cmp:比较；cmp(a,b);a &lt; b，返回-1；a > b,返回1；a = b,返回0。
 map:映射；map(func,iterable);将func作用于iterable每个元素上，返回一个可迭代的对象。
 filter:过滤器；filter(func,iterable);将func依次作用于iterable的每个元素，如果返回值为true, 保留元素，否则从iterable里面删除,返回一个迭代器。
 </code></pre>
 <h2 id="16-分别简述一下列表，元组，字典，集合的特点？"><a href="#16-分别简述一下列表，元组，字典，集合的特点？" class="headerlink" title="16,分别简述一下列表，元组，字典，集合的特点？"></a>16,分别简述一下列表，元组，字典，集合的特点？</h2><pre class=" language-markdown"><code class="language-markdown">列表：1、用list()函数或者[]创建，元素之间用逗号分隔；2、列表的元素不需要具有相同的类型；3、可以使用索引来访问元素(有序)；4、可以切片。
 元组：1、可以用tuple()函数或者()创建，元素之间用逗号分隔；2、元组的元素不需要具有相同的类型；3、可以使用索引来访问元素；4、可以切片；5、元素的值不可修改。
-字典：1、可以使用dict()函数或者{}创建，元素之间用逗号分隔，键和值之间用冒号分隔；2、元素由键（key）和值（value）组成 ；3、键必须是唯一，值可不唯一(无序)；4、通过键(key)访问元素。
+字典：1、可以使用dict()函数或者{}创建，元素之间用逗号分隔，键和值之间用冒号隔开；2、元素由键（key）和值（value）组成 ；3、键必须是唯一，值可不唯一(无序)；4、通过键(key)访问元素。
 集合：1、通过set()函数或者{}创建，元素之间用逗号分隔；2、与字典相比少了键；3、不可索引不可切片，应为是无序的；4、不可以有重复元素，常常用作去重操作。
 </code></pre>
 <h2 id="17-简述装饰器？"><a href="#17-简述装饰器？" class="headerlink" title="17,简述装饰器？"></a>17,简述装饰器？</h2><pre class=" language-markdown"><code class="language-markdown">装饰器本质上是一个python函数，它可以让其他函数在不需要任何代码变动的前提下增加额外功能，它的返回值也是一个函数。因为本质上是一个函数，所以可以传参数。
@@ -384,7 +397,7 @@ filter:过滤器；filter(func,iterable);将func依次作用于iterable的每个
 </code></pre>
 <h2 id="18，简述你对迭代器，生成器的理解；列表，字典，字符串是可迭代对象还是迭代器？"><a href="#18，简述你对迭代器，生成器的理解；列表，字典，字符串是可迭代对象还是迭代器？" class="headerlink" title="18，简述你对迭代器，生成器的理解；列表，字典，字符串是可迭代对象还是迭代器？"></a>18，简述你对迭代器，生成器的理解；列表，字典，字符串是可迭代对象还是迭代器？</h2><pre class=" language-markdown"><code class="language-markdown">迭代器：迭代器是指可以使用next()方法回调的对象(返回迭代的每一步，相当for循环，如果超出边界会抛出StopIteration异常)；也可以使用iter()方法将可迭代对象转换为迭代器。
 
-生成器：一个函数调用时返回一个迭代器或者函数中包含yield语法，那这个函数就是生成器，所以生成器是一种特殊的迭代器。在调用生成器运行的过程中，每次遇到yield时，函数会暂停并保存当前所有运行的运行信息，返回yield的值，并在下一次执行next()方法时从当前位置继续执行。
+生成器：一个函数调用时返回一个迭代器或者函数中包含yield语法，那这个函数就是生成器，所以生成器是一种特殊的迭代器。在调用生成器运行的过程中，每次遇到yield时，函数会暂停并保存当前所有运行的运行信息，返回yield后面的表达式，并在下一次执行next()方法时从当前位置继续执行。
 
 可迭代对象：可以使用for...in...语句进行循环的对象，比如字符串、列表、元组、字典以及迭代器、生成器都是可迭代对象。
 
@@ -413,14 +426,14 @@ print("初始num1=",num1)  # 1
 fun()  
 print("运行完函数后num1=",num1) # 2
 </code></pre>
-<h2 id="25，什么是面向对象？"><a href="#25，什么是面向对象？" class="headerlink" title="25，什么是面向对象？"></a>25，什么是面向对象？</h2><pre class=" language-markdown"><code class="language-markdown">面向对象是一种程序设计思想。它把对象作为程序的基本单元，一个对象包含了数据和操作数据的函数。在python中所有数据类型都可以视为对象，当然也可以自定义对象，自定义的对象数据类型就是面向对象中的类的概念。所有面向对象的设计思想是抽象出类，根据类创建实例。因此类是创建实例的模板，而实例则是一个个具体的对象，各个实例拥有的数据都是互相对立，互不影响。其中数据封装，继承，多态是面向对象的三大特点。
+<h2 id="25，什么是面向对象？"><a href="#25，什么是面向对象？" class="headerlink" title="25，什么是面向对象？"></a>25，什么是面向对象？</h2><pre class=" language-markdown"><code class="language-markdown">面向对象是一种程序设计思想。它把对象作为程序的基本单元，一个对象包含了数据和操作数据的函数。在python中所有数据类型都可以视为对象，当然也可以自定义对象，自定义对象的数据类型就是面向对象中的类的概念。所有面向对象的设计思想是抽象出类，根据类创建实例。因此类是创建实例的模板，而实例则是一个个具体的对象，各个实例拥有的数据都是互相对立，互不影响。其中数据封装，继承，多态是面向对象的三大特点。
 1、封装：所谓封装就是把类中的属性和方法私有化。这样可以将变化隔离和便于我们使用。
-2、继承：继承就是创建一种新类，新类可以从之前存在的类继承，因此新类称之为子类，被继承的类称为父类。所以新类可以将父类的所有功能之间拿过来使用而不需要重新写，当然也可以新增自己特有的方法，也可以把父类不适合的方法覆盖重写。
-3、多态：多态就是一个类有多个子类。比如一个动物类可以有狗类，猫类。所有不同的子类调用相同的父类方法时会产生不同的执行结果。
+2、继承：继承就是创建一种新类的方法，新类可以从之前存在的类继承，因此新类称之为子类，被继承的类称为父类。所以新类可以将父类的所有功能之间拿过来使用而不需要重新写，当然也可以新增自己特有的方法，也可以把父类不适合的方法覆盖重写。
+3、多态：多态就是一个类有多个子类。比如一个动物类可以有狗类，猫类。所有不同的子类调用父类相同的方法时会产生不同的执行结果。
 </code></pre>
 <h2 id="26，python2和python3的区别？"><a href="#26，python2和python3的区别？" class="headerlink" title="26，python2和python3的区别？"></a>26，<code>python2</code>和<code>python3</code>的区别？</h2><pre class=" language-markdown"><code class="language-markdown">1.Python3 使用 print 必须要以小括号包裹打印内容，比如 print('hi')
 2.python2 range(1,10)返回列表，python3中返回迭代器，节约内存
-3.python2中使用ascii编码，python中使用utf-8编码
+3.python2中使用ascii 编码，python中使用utf-8编码
 4.python2中unicode表示字符串序列，str表示字节序列，python3中str表示字符串序列，byte表示字节序列
 5.python2中为正常显示中文，引入coding声明，python3中不需要
 6.python2中是raw_input()函数，python3中是input()函数
