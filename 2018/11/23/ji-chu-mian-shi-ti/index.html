@@ -381,7 +381,7 @@ re.compile是将正则表达式编译成一个对象，加快匹配速度，并�
 <h2 id="13，python是如何进行内存管理的？"><a href="#13，python是如何进行内存管理的？" class="headerlink" title="13，python是如何进行内存管理的？"></a>13，<code>python</code>是如何进行内存管理的？</h2><pre class=" language-markdown"><code class="language-markdown">python内部使用引用计数，来保持追踪内存中的对象，python内部记录了对象有多少个引用，即引用计数，当对象被创建时就创建一个引用计数，当对象不再需要时，这个对象的引用计数为0，它被垃圾回收。
 </code></pre>
 <h2 id="14，什么是lambda函数，它有什么好处？"><a href="#14，什么是lambda函数，它有什么好处？" class="headerlink" title="14，什么是lambda函数，它有什么好处？"></a>14，什么是<code>lambda函数</code>，它有什么好处？</h2><pre class=" language-markdown"><code class="language-markdown">lambda函数是一个可以接收另意多个参数（包括可选参数）并返回单个表达式值的匿名函数。如：lambda x,y:x + y  获取下，y两个参数的和的lambda函数。
-好处：1、lambda函数比较轻便，即用即删除；2、匿名函数，一般用来给filter，map这样的函数式编程服务；3、作为回调函数，传递给某些应用，比如消息处理。
+好处：1、lambda函数比较轻便，即用即删除；2、一般用来给filter，map这样的函数式编程服务；3、作为回调函数，传递给某些应用，比如消息处理。
 </code></pre>
 <h2 id="15，分别说说cmp-map-filter的作用？"><a href="#15，分别说说cmp-map-filter的作用？" class="headerlink" title="15，分别说说cmp,map,filter的作用？"></a>15，分别说说<code>cmp</code>,<code>map</code>,<code>filter</code>的作用？</h2><pre class=" language-markdown"><code class="language-markdown">都是高阶函数。
 cmp:比较；cmp(a,b);a &lt; b，返回-1；a > b,返回1；a = b,返回0。<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>python3中该函数被删除</span><span class="token punctuation">></span></span>
@@ -447,11 +447,13 @@ print("运行完函数后num1=",num1) # 2
 </code></pre>
 <h2 id="29-简述with方法打开处理文件时帮我们做了什么？"><a href="#29-简述with方法打开处理文件时帮我们做了什么？" class="headerlink" title="29,简述with方法打开处理文件时帮我们做了什么？"></a>29,简述<code>with方法</code>打开处理文件时帮我们做了什么？</h2><pre class=" language-markdown"><code class="language-markdown">当with体完成时，会自动实现finally中的f.close()函数，关闭文件，而不需要考虑文件的异常判断。
 </code></pre>
-<h2 id="30，简单解释下python的GIL锁-全局解释锁-。"><a href="#30，简单解释下python的GIL锁-全局解释锁-。" class="headerlink" title="30，简单解释下python的GIL锁(全局解释锁)。"></a>30，简单解释下<code>python</code>的<code>GIL锁</code>(全局解释锁)。</h2><pre><code>GIL锁简单来说就是一个互斥体，这样的机制只允许一个线程来控制python解释器。这就意味着在任何一个时间点只有一个线程处于执行状态。所以在IO操作等可能引起阻塞前会暂时释放GIL,但在执行完毕后必须重新获取GIL。为了解决它带来的麻烦可以使用以下几个方案：
+<h2 id="30，简单解释下python的GIL锁-全局解释锁-。"><a href="#30，简单解释下python的GIL锁-全局解释锁-。" class="headerlink" title="30，简单解释下python的GIL锁(全局解释锁)。"></a>30，简单解释下<code>python</code>的<code>GIL锁</code>(全局解释锁)。</h2><pre class=" language-markdown"><code class="language-markdown">GIL锁简单来说就是一个互斥体，这样的机制只允许一个线程来控制python解释器。这就意味着在任何一个时间点只有一个线程处于执行状态。所以在IO操作等可能引起阻塞前会暂时释放GIL,但在执行完毕后必须重新获取GIL。为了解决它带来的麻烦可以使用以下几个方案：
 1、更换解释器；2、将线程的代码换成其他语言执行；3、使用多进程完成多任务处理。
-</code></pre><h2 id="31，utf-8和unicode的区别是什么？"><a href="#31，utf-8和unicode的区别是什么？" class="headerlink" title="31，utf-8和unicode的区别是什么？"></a>31，<code>utf-8</code>和<code>unicode</code>的区别是什么？</h2><pre><code>unicode是字符集，是为每一个字符分配一个唯一ID(学名为码位/码点)；
+</code></pre>
+<h2 id="31，utf-8和unicode的区别是什么？"><a href="#31，utf-8和unicode的区别是什么？" class="headerlink" title="31，utf-8和unicode的区别是什么？"></a>31，<code>utf-8</code>和<code>unicode</code>的区别是什么？</h2><pre class=" language-markdown"><code class="language-markdown">unicode是字符集，是为每一个字符分配一个唯一ID(学名为码位/码点)；
 utf-8是编码规则，是一套以8位为一个编码单位的可变长编码。会将一个字符集编码为1到4个字节。
-</code></pre><h2 id="32，1-2-2014-的结果末尾有多少个0？请写出解题思路或者计算过程。"><a href="#32，1-2-2014-的结果末尾有多少个0？请写出解题思路或者计算过程。" class="headerlink" title="32，1  2 . . .  2014 的结果末尾有多少个0？请写出解题思路或者计算过程。"></a>32，1 <em> 2 . . . </em> 2014 的结果末尾有多少个0？请写出解题思路或者计算过程。</h2><pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> functools <span class="token keyword">import</span> reduce
+</code></pre>
+<h2 id="32，1-2-2014-的结果末尾有多少个0？请写出解题思路或者计算过程。"><a href="#32，1-2-2014-的结果末尾有多少个0？请写出解题思路或者计算过程。" class="headerlink" title="32，1  2 . . .  2014 的结果末尾有多少个0？请写出解题思路或者计算过程。"></a>32，1 <em> 2 . . . </em> 2014 的结果末尾有多少个0？请写出解题思路或者计算过程。</h2><pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> functools <span class="token keyword">import</span> reduce
 a <span class="token operator">=</span> str<span class="token punctuation">(</span>reduce<span class="token punctuation">(</span><span class="token keyword">lambda</span> x<span class="token punctuation">,</span>y<span class="token punctuation">:</span>x<span class="token operator">*</span>y<span class="token punctuation">,</span>range<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2015</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 count <span class="token operator">=</span> <span class="token number">0</span>
 <span class="token keyword">for</span> i <span class="token keyword">in</span> a<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
@@ -468,11 +470,12 @@ f<span class="token punctuation">.</span>close<span class="token punctuation">(<
     <span class="token keyword">with</span> open<span class="token punctuation">(</span><span class="token string">'新的文件名.txt'</span><span class="token punctuation">,</span><span class="token string">'a'</span><span class="token punctuation">,</span>encoding<span class="token operator">=</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
         f<span class="token punctuation">.</span>write<span class="token punctuation">(</span>i<span class="token punctuation">)</span>
 </code></pre>
-<h2 id="34-python中如何动态获取和设置对象属性？"><a href="#34-python中如何动态获取和设置对象属性？" class="headerlink" title="34,python中如何动态获取和设置对象属性？"></a>34,<code>python</code>中如何动态获取和设置对象属性？</h2><pre><code>1,dir([obj]):调用这方法将返回包含obj大多数属性名的列表(会有一些特殊的属性不包含在内)，obj的默认值时当前模块对象；
+<h2 id="34-python中如何动态获取和设置对象属性？"><a href="#34-python中如何动态获取和设置对象属性？" class="headerlink" title="34,python中如何动态获取和设置对象属性？"></a>34,<code>python</code>中如何动态获取和设置对象属性？</h2><pre class=" language-markdown"><code class="language-markdown">1,dir([obj]):调用这方法将返回包含obj大多数属性名的列表(会有一些特殊的属性不包含在内)，obj的默认值时当前模块对象；
 2,hasattr(obj,attr):调用这个方法时检查obj是否有一个名为attr的属性，返回布尔值；
-3,getattr(obj,attr):调用这个方法将返回obj中名为attr属性的值，例如：如果attr为&#39;name&#39;,则返回obj.name的值。
-4,setattr(obj,attr,&#39;小明&#39;):调用这个方法将给obj的名attr的属性赋值为“小明”；例如：attr为&#39;name&#39;，则obj.name = &#39;小明&#39;。
-</code></pre><h2 id="35，请使用python内置函数处理如下问题："><a href="#35，请使用python内置函数处理如下问题：" class="headerlink" title="35，请使用python内置函数处理如下问题："></a>35，请使用python内置函数处理如下问题：</h2><pre><code>1.请判断一个字符串是否以er结尾；
+3,getattr(obj,attr):调用这个方法将返回obj中名为attr属性的值，例如：如果attr为'name',则返回obj.name的值。
+4,setattr(obj,attr,'小明'):调用这个方法将给obj的名attr的属性赋值为“小明”；例如：attr为'name'，则obj.name = '小明'。
+</code></pre>
+<h2 id="35，请使用python内置函数处理如下问题："><a href="#35，请使用python内置函数处理如下问题：" class="headerlink" title="35，请使用python内置函数处理如下问题："></a>35，请使用python内置函数处理如下问题：</h2><pre><code>1.请判断一个字符串是否以er结尾；
 2.请将“#teacher#”两侧的“#”去除；
 3.请使用map函数将[1,2,3,4]处理成[1,0,1,0];
 4.请使用filter函数将[1,2,3,4]处理成[2,4];
@@ -516,6 +519,8 @@ b <span class="token operator">=</span> <span class="token punctuation">[</span>
 c <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'b'</span><span class="token punctuation">,</span><span class="token string">'c'</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
 d <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token string">'b'</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
 <span class="token comment" spellcheck="true"># 浅拷贝时，列表外层不变，内层跟着改变；深拷贝时，内外层都不变，拷贝的对象和原列表无关</span>
+</code></pre>
+<h2 id="37，简述Json。"><a href="#37，简述Json。" class="headerlink" title="37，简述Json。"></a>37，简述Json。</h2><pre class=" language-markdown"><code class="language-markdown">
 </code></pre>
 
             </div>
@@ -713,12 +718,12 @@ sessionstorag</div>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/python/" target="_blank">
-                        <span class="chip bg-color">python</span>
-                    </a>
-                    
                     <a href="/tags/前端/" target="_blank">
                         <span class="chip bg-color">前端</span>
+                    </a>
+                    
+                    <a href="/tags/python/" target="_blank">
+                        <span class="chip bg-color">python</span>
                     </a>
                     
                 </div>
