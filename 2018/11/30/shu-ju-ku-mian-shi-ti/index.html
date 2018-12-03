@@ -330,7 +330,7 @@ group by 用于集合聚合函数，根据一个列或者多个列对结果集�
 </code></pre>
 <h2 id="4，MySQL的常用类型有哪些？"><a href="#4，MySQL的常用类型有哪些？" class="headerlink" title="4，MySQL的常用类型有哪些？"></a>4，<code>MySQL</code>的常用类型有哪些？</h2><pre class=" language-markdown"><code class="language-markdown">常用类型有：字符串类型，数值类型，日期和时间类型。
 字符串类型包括:char,varchar,text。
-char 是定长字符串，长度范围在0-255字节；
+char是定长字符串，长度范围在0-255字节；
 varchar是变长字符串，长度范围在0-65535字节；
 text是长文本数据，长度范围在0-65535字节。
 varchar类型可以根据实际内容动态改变存储值的长度，与char相比可以节约磁盘空间，提高存储效率；与text相比可以设置默认值。
@@ -398,6 +398,16 @@ MyISAM是MySQL默认的引擎，它的设计目标是快速读取。
 1、不支持数据库事务；2、只支持表级锁，不支持行级锁和外键；3、不支持故障恢复。
 使用场景：
 1、不需要事务操作；2、插入，更新少，读取频繁；3、频繁的使用count统计。
+</code></pre>
+<h2 id="10，简单比较一下RDBMS和NoSQL-不超过三句话-。"><a href="#10，简单比较一下RDBMS和NoSQL-不超过三句话-。" class="headerlink" title="10，简单比较一下RDBMS和NoSQL(不超过三句话)。"></a>10，简单比较一下<code>RDBMS</code>和<code>NoSQL</code>(不超过三句话)。</h2><pre class=" language-markdown"><code class="language-markdown">RDBMS是关系型数据库管理系统，NoSQL是非关系数据库。
+RDBMS分布式困难，NoSQL则比较容易。
+</code></pre>
+<h2 id="11，简单说一说drop、delete与truncate的区别。"><a href="#11，简单说一说drop、delete与truncate的区别。" class="headerlink" title="11，简单说一说drop、delete与truncate的区别。"></a>11，简单说一说<code>drop</code>、<code>delete</code>与<code>truncate</code>的区别。</h2><pre class=" language-markdown"><code class="language-markdown">这三者都是表达删除的意思。区别如下：
+1、drop语句是删除表的结构，以及被依赖的约束，触发器，索引；依赖于该表的存储过程/函数将保留，但会变为invalid(无效的)状态；truncate和delete只删除数据不删除表的结构;
+2、delete语句是dml(数据操作语言),这个操作在事务提交后才生效，可以回滚，如果有相应的触发器，那么在执行的时候会被触发；而drop和truncate是ddl(数据定义语言)，操作立即生效，不能回滚，操作不触发触发器;
+3、在速度上来说：drop>truncate>delete。
+使用场景：
+不再需要一张表时用drop删除；当要删除部分数据时用delete配合where字句；想要保留表而将所有数据删除并且和事务无关的话用truncate，和事务有关时用delete。
 </code></pre>
 
             </div>

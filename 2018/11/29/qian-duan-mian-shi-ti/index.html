@@ -325,7 +325,7 @@ sessionstorage是会话存储，localstorage是本地存储。
 <h2 id="2-jquery中-get-提交-和-post-提交有区别吗"><a href="#2-jquery中-get-提交-和-post-提交有区别吗" class="headerlink" title="2,jquery中$.get()提交 和$.post()提交有区别吗?"></a>2,jquery中<code>$.get()提交</code> 和<code>$.post()提交</code>有区别吗?</h2><pre class=" language-markdown"><code class="language-markdown">两者都是通过异步请求的方式来获取服务器的数据。
 区别如下：
 1、请求方式不同：$.get()方法是通过GET方法进行异步请求的；$.post()是通过POST方法进行异步请求的。
-2、参数传递方式不同：get请求会将参数跟在url后面进行传递；post请求则是作为http消息的实体内容传递给web服务器，这种传递是用户是不可见的。
+2、参数传递方式不同：get请求会将参数跟在url后面进行传递；post请求则是作为http消息的实体内容传递给web服务器，这种传递是用户是不可见的(比如表单提交)。
 3、数据传输大小不同：get请求的传输数据大小不超过2k，而post要大得多。
 4、安全问题：get请求的数据会被浏览器缓存起来所有相比post请求来说不安全。
 </code></pre>
