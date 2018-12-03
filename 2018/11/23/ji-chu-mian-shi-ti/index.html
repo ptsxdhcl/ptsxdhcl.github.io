@@ -382,6 +382,7 @@ re.compile是将正则表达式编译成一个对象，加快匹配速度，并�
 </code></pre>
 <h2 id="14，什么是lambda函数，它有什么好处？"><a href="#14，什么是lambda函数，它有什么好处？" class="headerlink" title="14，什么是lambda函数，它有什么好处？"></a>14，什么是<code>lambda函数</code>，它有什么好处？</h2><pre class=" language-markdown"><code class="language-markdown">lambda函数是一个可以接收另意多个参数（包括可选参数）并返回单个表达式值的匿名函数。如：lambda x,y:x + y  获取下，y两个参数的和的lambda函数。
 好处：1、lambda函数比较轻便，即用即删除；2、一般用来给filter，map这样的函数式编程服务；3、作为回调函数，传递给某些应用，比如消息处理。
+缺点:更复杂的操作不适合，可读性不高。
 </code></pre>
 <h2 id="15，分别说说cmp-map-filter的作用？"><a href="#15，分别说说cmp-map-filter的作用？" class="headerlink" title="15，分别说说cmp,map,filter的作用？"></a>15，分别说说<code>cmp</code>,<code>map</code>,<code>filter</code>的作用？</h2><pre class=" language-markdown"><code class="language-markdown">都是高阶函数。
 cmp:比较；cmp(a,b);a &lt; b，返回-1；a > b,返回1；a = b,返回0。<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>python3中该函数被删除</span><span class="token punctuation">></span></span>
