@@ -407,7 +407,8 @@ js是一种基于对象和时间驱动并具有安全性能的脚本语言。用
 LVS的原理是在Linux内核态获取IP报文后，根据特定的负载均衡算法将IP报文转发到整个集群的某天服务器中。
 缺点在于LVS的性能依赖Linux内核的网络性能，但Linux内核的网络路径过长导致大量开销，是的LVS单机性能低。
 </code></pre>
-<h2 id="10，阐述清除浮动的几种方式？"><a href="#10，阐述清除浮动的几种方式？" class="headerlink" title="10，阐述清除浮动的几种方式？"></a>10，阐述清除浮动的几种方式？</h2><pre class=" language-markdown"><code class="language-markdown">有4种方法清除浮动。
+<h2 id="10，阐述清除浮动的几种方式？"><a href="#10，阐述清除浮动的几种方式？" class="headerlink" title="10，阐述清除浮动的几种方式？"></a>10，阐述清除浮动的几种方式？</h2><pre class=" language-markdown"><code class="language-markdown">首先浮动元素脱离文档流，不占据空间。然后是浮动元素碰到包含它的边框或者其他浮动元素边框时会停留。所以会导致‘高度塌陷’现象。
+有4种方法清除浮动。
 1、父级div定义height：
   原理：父级div手动设置height，解决父级div无法自动获取高度的问题。
   优点：简单，代码少容易掌握。
@@ -418,17 +419,17 @@ LVS的原理是在Linux内核态获取IP报文后，根据特定的负载均衡�
   优点：简单，代码少，浏览器支持好。
   缺点：会额外增加很多空出来的div。
 
-3、父级定义伪元素；clearfix
+3、父级定义伪元素；clearfix  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>推荐使用</span><span class="token punctuation">></span></span>
   原理：在父级元素最后，添加了一个:after伪元素，通过清除伪元素的浮动，来撑起父元素高度。
 
 4、利用overflow清除浮动：overflow:hidden或overflow:auto
   原理：使用overflow；auto时，先定义width，同时不能定义height,这时浏览器会自动检查浮动区域的高度。
   优点：简单，代码少，浏览器支持好。
-  缺点：内部宽度超过父级div时会出现滚动条。
+  缺点：使用auto时，如果内部宽度超过父级div时那么会出现滚动条；使用hidden时，如不能和position同时使用，如果超出尺寸会被隐藏。
 </code></pre>
 <h2 id="11，JavaScript中定时器有哪些？它们的区别和用法是什么？"><a href="#11，JavaScript中定时器有哪些？它们的区别和用法是什么？" class="headerlink" title="11，JavaScript中定时器有哪些？它们的区别和用法是什么？"></a>11，JavaScript中定时器有哪些？它们的区别和用法是什么？</h2><pre class=" language-markdown"><code class="language-markdown">有两个；一个是setInterval，一个是setTimeout。
 1、setInterval:间歇性定时器。setInterval(func,time):每隔time时间(毫秒计)重复执行func函数。我们可以使用clearInterval来关闭这个定时器。
-2、setTimeout:延时定时器。setTimeout(func,time);隔time时间之后执行func。我们可以使用clearTimeout来关闭之歌定时器。
+2、setTimeout:延时定时器。setTimeout(func,time);隔time时间之后执行func。我们可以使用clearTimeout来关闭这个定时器。
 </code></pre>
 <h2 id="12，列举最少5个jquery鼠标事件。"><a href="#12，列举最少5个jquery鼠标事件。" class="headerlink" title="12，列举最少5个jquery鼠标事件。"></a>12，列举最少5个<code>jquery鼠标事件</code>。</h2><pre class=" language-markdown"><code class="language-markdown">单击事件(click);双击事件(dbclick);
 移入事件(mouseover);移出事件(mouseout);
