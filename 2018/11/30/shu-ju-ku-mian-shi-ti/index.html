@@ -316,9 +316,9 @@ order by 用于对结果集按照一个列或者多个列进行排序。其中AS
 group by 用于集合聚合函数，根据一个列或者多个列对结果集进行分组。后面可以使用having条件。
 </code></pre>
 <h2 id="2，简述关系型数据库和非关系型数据库的区别？并举例。"><a href="#2，简述关系型数据库和非关系型数据库的区别？并举例。" class="headerlink" title="2，简述关系型数据库和非关系型数据库的区别？并举例。"></a>2，简述关系型数据库和非关系型数据库的区别？并举例。</h2><p><a href="https://www.jianshu.com/p/fd7b422d5f93" target="_blank" rel="noopener">点击查看</a></p>
-<pre class=" language-markdown"><code class="language-markdown">关系型数据库是通过外键关联来建立表与表之间的关系。比如MySQL，oracle。
+<pre class=" language-markdown"><code class="language-markdown">关系型数据库由二维表及外键组成的一个数据组织。比如MySQL，oracle。
 它的优点在于使用方便、易于维护、容易理解。
-非关系型数据库通常是指数据以对象的形式存储在数据库中，而对象之间的关系通过每个对象自身的属性来决定。比如Redis，MongoDB。
+非关系型数据库通常是指数据以键值对(key-value)的形式存储,结构不稳定的数据库。比如Redis，MongoDB。
 它的优点在于用户查询时不需要多表关联查询，查询速度快。
 </code></pre>
 <h2 id="3，什么是事务？它的特性是什么？"><a href="#3，什么是事务？它的特性是什么？" class="headerlink" title="3，什么是事务？它的特性是什么？"></a>3，什么是事务？它的特性是什么？</h2><pre class=" language-markdown"><code class="language-markdown">事务是一系列数据库操作，是数据库应用的基本逻辑。
@@ -353,7 +353,7 @@ datetime精确的年月日时分秒，占8个字节。(YYYY-MM-DD HH:MM:AA 2018-
 1、给经常作为查询条件的字段添加索引；
 2、添加索引的字段经量保持唯一性；
 3、在使用索引时，注意索引类型；
-4、在使用like模糊查询时，%和_ 如果出现在最前面，则用不上索引。
+4、在使用like模糊查询时，%和_ 不要出现再前面。
 </code></pre>
 <h2 id="6，NoSQL了解么，和关系数据库的区别？"><a href="#6，NoSQL了解么，和关系数据库的区别？" class="headerlink" title="6，NoSQL了解么，和关系数据库的区别？"></a>6，<code>NoSQL</code>了解么，和关系数据库的区别？</h2><p><a href="https://www.jianshu.com/p/2d2a951fe0df" target="_blank" rel="noopener">点击查看详情</a></p>
 <pre class=" language-markdown"><code class="language-markdown">NoSQL(Not only SQL)是非关系型数据库。用于超大规模数据的存储。它的特点如下：
