@@ -365,7 +365,7 @@ datetime精确的年月日时分秒，占8个字节。(YYYY-MM-DD HH:MM:AA 2018-
 </code></pre>
 <h2 id="7，redis有几种常用的存储类型？"><a href="#7，redis有几种常用的存储类型？" class="headerlink" title="7，redis有几种常用的存储类型？"></a>7，<code>redis</code>有几种常用的存储类型？</h2><pre class=" language-markdown"><code class="language-markdown">redis是基于内存，可选持久性的键值对存储数据库。
 存储类型如下：
-字符串(string)、哈希(hash)、列表(list)、集合(sets)、有序集合(sorted sets)。
+字符串(string)、哈希(hash)、列表(list)、集合(set)、有序集合(sorted set)。
 </code></pre>
 <h2 id="8，索引是什么？有什么作用及优缺点？"><a href="#8，索引是什么？有什么作用及优缺点？" class="headerlink" title="8，索引是什么？有什么作用及优缺点？"></a>8，索引是什么？有什么作用及优缺点？</h2><pre class=" language-markdown"><code class="language-markdown">索引是对数据库表中一个或多个列的值进行排序的结构，它可以帮助mysql高效获取数据。索引的实现通常使用B树和B+树。索引又可以分为普通索引，唯一索引，主键索引，全文索引。
 普通索引：最基本的索引类型；
@@ -383,7 +383,7 @@ datetime精确的年月日时分秒，占8个字节。(YYYY-MM-DD HH:MM:AA 2018-
 </code></pre>
 <h2 id="9，MySQL数据库的有几种引擎？和使用场景。"><a href="#9，MySQL数据库的有几种引擎？和使用场景。" class="headerlink" title="9，MySQL数据库的有几种引擎？和使用场景。"></a>9，<code>MySQL数据库</code>的有几种引擎？和使用场景。</h2><p><a href="http://uule.iteye.com/blog/2420424" target="_blank" rel="noopener">点击查看详情</a></p>
 <pre class=" language-markdown"><code class="language-markdown">主要有Innodb和MyISAM。
-Innodb是一个事务型的存储引擎，它的设计目标是处理大量数据时提供高性能的服务，它在运行时会在内存中建立缓冲池，用于缓冲数据和索引。
+Innodb是一个事务型的存储引擎(MySQL的默认引擎)，它的设计目标是处理大量数据时提供高性能的服务，它在运行时会在内存中建立缓冲池，用于缓冲数据和索引。
 它具有以下几个优点：
 1、支持事务；2、实现sql标准的四种隔离级别；
 3、支持外键和行级锁；4、可以利用事务日志进行数据恢复。
@@ -391,7 +391,7 @@ Innodb是一个事务型的存储引擎，它的设计目标是处理大量数�
 使用场景：
 1、需要事务的操作；2、更新数据需要用到行级锁；3、大数据读写；4、大型互联网应用。
 
-MyISAM是MySQL默认的引擎，它的设计目标是快速读取。
+MyISAM是MySQL 5.1之前的默认引擎，它的设计目标是快速读取。
 优点如下：
 1、高性能读取；2、支持fulltext类型的全文索引，索引count统计时不会扫描全表。
 缺点:
