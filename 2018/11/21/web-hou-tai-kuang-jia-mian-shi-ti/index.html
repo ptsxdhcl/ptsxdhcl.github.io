@@ -316,8 +316,19 @@
 <span class="token code keyword">    a:iostraem:对非阻塞式的socket进行简单的封装</span>
 <span class="token code keyword">    b:ioloop:对I/O多路复用的封装，它实现了一个单例</span>
 </code></pre>
-<h2 id="2，简述MVC和MTV。"><a href="#2，简述MVC和MTV。" class="headerlink" title="2，简述MVC和MTV。"></a>2，简述<code>MVC</code>和<code>MTV</code>。</h2><pre class=" language-markdown"><code class="language-markdown">
+<h2 id="2，简述MVC和MVT。"><a href="#2，简述MVC和MVT。" class="headerlink" title="2，简述MVC和MVT。"></a>2，简述<code>MVC</code>和<code>MVT</code>。</h2><pre class=" language-markdown"><code class="language-markdown">MVT和MVC都是框架式。
+MVC的设计核心是为了让不同的代码块之间降低耦合，增强代码的可拓展性和可移植性，实现向后兼容。
+M是模型，model，负责业务对象与数据库的映射(ORM:对象-关系映射)，可以让我们不写SQL语句操作数据库；
+V是视图，view，负责与用户的交互，生成页面展示html内容；
+C是控制器，controller，用于接收请求，处理业务逻辑，与model，view交互，返回结果。
 
+而django框架中的MVT借用了MVC的思想。
+M是模型，model，与MVC中的M功能一样，负责和数据库交互；
+V是视图，view，与MVC中的C功能一样，负责接收请求，处理业务逻辑；
+T是模板，与MVC中的V功能一样，负责生成页面，展示给用户看。
+此外django中还有urls分发器，将不同的url分发给不同的view处理。
+</code></pre>
+<h2 id="3，django中如何读取和保存session，整个session运行机制是什么？"><a href="#3，django中如何读取和保存session，整个session运行机制是什么？" class="headerlink" title="3，django中如何读取和保存session，整个session运行机制是什么？"></a>3，<code>django</code>中如何读取和保存<code>session</code>，整个<code>session</code>运行机制是什么？</h2><pre class=" language-markdown"><code class="language-markdown">
 
 
 </code></pre>

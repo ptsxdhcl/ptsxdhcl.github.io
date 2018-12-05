@@ -317,7 +317,7 @@ sessionstorage和localstorage都是HTML5提供的在客户端存储数据的方�
 sessionstorage是会话存储，localstorage是本地存储。
 这三者都是保存在客户端且同源的。
 它们有以下几个区别：
-1、数据与服务器间交互方式不同：cookies是在浏览器和服务器间来回传递，而且还有路径(path)的概念，可以限制在cookie只属于某个路径下；而sessionstorage和localstorage不会自动把数据发给服务器，仅在本地保存。
+1、数据与服务器间交互方式不同：cookie是在浏览器和服务器间来回传递，而且还有路径(path)的概念，可以限制在cookie只属于某个路径下；而sessionstorage和localstorage不会自动把数据发给服务器，仅在本地保存。
 2、存储大小限制不同：cookie数据不能超过4k,而sessionstorage和localstorage可以达到5M或更大。
 3、数据有效期不同：cookie只在设置的cookie过期时间之前有效，即使窗口或浏览器关闭；sessionstorage仅在浏览器窗口关闭之前有效；localstorage持久有效，即使浏览器窗口关闭也可以持久保存。
 4、作用域不同：sessionstorage在不同的浏览器窗口是不共享的，即使是同一个页面；而localstorage和cookie是在所有的同源窗口共享。
