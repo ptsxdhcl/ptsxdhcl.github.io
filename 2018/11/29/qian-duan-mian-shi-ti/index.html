@@ -435,10 +435,10 @@ LVS的原理是在Linux内核态获取IP报文后，根据特定的负载均衡�
 移入事件(mouseover);移出事件(mouseout);
 鼠标按下事件(mousedown);鼠标抬起事件(mouseup);
 </code></pre>
-<h2 id="13-简述requests模块的作用及基本使用？"><a href="#13-简述requests模块的作用及基本使用？" class="headerlink" title="13,简述requests模块的作用及基本使用？"></a>13,简述<code>requests模块</code>的作用及基本使用？</h2><pre class=" language-markdown"><code class="language-markdown">requests是用于网络请求操作的一个模块，主要用于爬虫。
+<h2 id="13-简述requests模块的作用及基本使用？"><a href="#13-简述requests模块的作用及基本使用？" class="headerlink" title="13,简述requests模块的作用及基本使用？"></a>13,简述<code>requests模块</code>的作用及基本使用？</h2><pre class=" language-markdown"><code class="language-markdown">requests是用于网络请求,返回响应数据的一个模块，主要用于爬虫。
 主要是requests.get()和requests.post()两种请求方式，可以传递json参数；
 可以使用response.content获取二进制数据，也可以使用response.text获取文本数据，其中可以使用response.encoding指定编码类型；
-使用response.cookie保存cookie值。
+使用response.cookies返回对象中所有的cookie对象。
 </code></pre>
 <h2 id="14，cookie和session的区别？"><a href="#14，cookie和session的区别？" class="headerlink" title="14，cookie和session的区别？"></a>14，<code>cookie</code>和<code>session</code>的区别？</h2><pre class=" language-markdown"><code class="language-markdown">cookie是客户端保存用户信息的一种机制，用来记录用户的一些信息。它可以用来识别用户身份，记录历史。
 session是在无状态的http协议下，服务端记录用户状态时用于标识集体用户的机制。
