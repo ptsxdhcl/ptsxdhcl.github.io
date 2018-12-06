@@ -328,8 +328,8 @@ V是视图，view，与MVC中的C功能一样，先定义好对象所需要的�
 T是模板，template，与MVC中的V功能一样，负责生成页面，展示给用户看。
 此外django中还有urls分发器，将不同的url分发给不同的view处理。
 </code></pre>
-<h2 id="3，django中如何读取和保存session，整个session运行机制是什么？"><a href="#3，django中如何读取和保存session，整个session运行机制是什么？" class="headerlink" title="3，django中如何读取和保存session，整个session运行机制是什么？"></a>3，<code>django</code>中如何读取和保存<code>session</code>，整个<code>session</code>运行机制是什么？</h2><pre class=" language-markdown"><code class="language-markdown">再django中使用 request.session['order<span class="token italic"><span class="token punctuation">_</span>id'] = order<span class="token punctuation">_</span></span>id 来保存session，使用   request.get来读取session。
-session将信息以加密的方式存储再服务器端，然后将一个 session<span class="token italic"><span class="token punctuation">_</span>id 返回给浏览器，让浏览器生成cookie去保存这个session<span class="token punctuation">_</span></span>id,当我们需要数据时，就将cookie中的session_id发送给服务器，这样服务器端根据这个id获取数据并返回给浏览器。
+<h2 id="3，django中如何读取和保存session，整个session运行机制是什么？"><a href="#3，django中如何读取和保存session，整个session运行机制是什么？" class="headerlink" title="3，django中如何读取和保存session，整个session运行机制是什么？"></a>3，<code>django</code>中如何读取和保存<code>session</code>，整个<code>session</code>运行机制是什么？</h2><pre class=" language-markdown"><code class="language-markdown">再django中使用 request.session['order<span class="token italic"><span class="token punctuation">_</span>id'] = order<span class="token punctuation">_</span></span>id 来保存session，使用   request.get来读取session。(可以使用del request.session['order<span class="token italic"><span class="token punctuation">_</span>id']删除，如果key不存在会报错；request.session.clear()清除所有会话，但是数据保留；request.session.flush()删除当前的会话数据)
+session将信息以加密的方式存储再服务器端，然后将一个 session<span class="token punctuation">_</span></span>id 返回给浏览器，让浏览器生成cookie去保存这个session<span class="token italic"><span class="token punctuation">_</span>id,当我们需要数据时，就将cookie中的session<span class="token punctuation">_</span></span>id发送给服务器，这样服务器端根据这个id获取数据并返回给浏览器。
 </code></pre>
 <h2 id="4，简述django对http请求的执行流程。"><a href="#4，简述django对http请求的执行流程。" class="headerlink" title="4，简述django对http请求的执行流程。"></a>4，简述django对http请求的执行流程。</h2><p><a href="https://www.jianshu.com/p/a2bf34b89d01" target="_blank" rel="noopener">点击查看详情</a></p>
 <pre class=" language-markdown"><code class="language-markdown">分为以下几个步骤：
@@ -339,6 +339,37 @@ session将信息以加密的方式存储再服务器端，然后将一个 sessio
 3、如果传给view中间件抛出异常则经过Exception中间件，之间返回response，交给rseponse中间件做收尾工作；如果不抛异常则判断是否返回response；
 4、如果返回的是response，则交给response中间件做收尾工作；如果不是response，则调用
 view视图函数，返回rsponse。再交给response中间件做收尾工作。
+</code></pre>
+<h2 id="5，cookie和session的区别？"><a href="#5，cookie和session的区别？" class="headerlink" title="5，cookie和session的区别？"></a>5，<code>cookie</code>和<code>session</code>的区别？</h2><pre class=" language-markdown"><code class="language-markdown">cookie是在客户端保存用户信息的一种机制。session是服务端用来识别用户的一种机制。
+它们有以下几个区别：
+1、cookie是保存在客户端中，而session是保存在服务端中；
+2、cookie保存的数据大小不超过4K，session要大得多；
+3、cookie当中的数据信息可以查看和修改，因此不太安全，而session不可查看和修改；
+4、session的实现依赖于session<span class="token italic"><span class="token punctuation">_</span>id,而session<span class="token punctuation">_</span></span>id又是保存在cookie中，索引session是依赖于cookie而存在的一种数据存储形式。
+</code></pre>
+<h2 id="6，请简要说明django框架中视图的作用？"><a href="#6，请简要说明django框架中视图的作用？" class="headerlink" title="6，请简要说明django框架中视图的作用？"></a>6，请简要说明django框架中<code>视图</code>的作用？</h2><pre class=" language-markdown"><code class="language-markdown">它的作用就是先定义好各类对象所需功能的函数，然后接收请求，处理业务逻辑，返回结果。
+其中每一个视图函数都对应着一个url请求。
+</code></pre>
+<h2 id="7，Django中查询QuerySet时什么情况下用Q"><a href="#7，Django中查询QuerySet时什么情况下用Q" class="headerlink" title="7，Django中查询QuerySet时什么情况下用Q?"></a>7，Django中查询<code>QuerySet</code>时什么情况下用Q?</h2><pre class=" language-markdown"><code class="language-markdown">QuerySet是django的查询集。我们一般使用filter()、exclude()来进行按单一条件查询。
+当我们需要进行复杂的查询时，比如两个条件是and或者or,这时上面两个方法就不适合了。
+所以我们可以使用Q()将这些条件组成一个Q对象，其中多个Q对象可以使用‘或、且、非’进行组合。
+这样我们就可以将Q对象当作参数传递给filter()、get()、exclude()进行复杂查询。
+</code></pre>
+<h2 id="8，django的优缺点？"><a href="#8，django的优缺点？" class="headerlink" title="8，django的优缺点？"></a>8，django的优缺点？</h2><pre class=" language-markdown"><code class="language-markdown">优点：
+1、功能完善，自带大量的常用工具和框架(比如：分页，权限认证)；
+2、自带后台管理系统；
+3、debug信息详细，查找错误代码方便；
+4、modle层自带ORM组件，无需写sql语句就可以对数据库进行操作；
+缺点：
+1、开发小应用时不如Flask；
+2、框架中的组件之间耦合度过高，不易拆分；
+</code></pre>
+<h2 id="9，flask的优缺点？"><a href="#9，flask的优缺点？" class="headerlink" title="9，flask的优缺点？"></a>9，flask的优缺点？</h2><pre class=" language-markdown"><code class="language-markdown">优点：
+1、flask只提供了核心功能，简单优雅；
+2、自由，灵活，可拓展性强；
+3、适合开发web服务的API;
+缺点：
+1、第三方库应用过于频繁
 </code></pre>
 
             </div>
