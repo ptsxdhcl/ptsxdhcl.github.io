@@ -403,9 +403,9 @@ MyISAM是MySQL 5.1之前的默认引擎，它的设计目标是快速读取。
 RDBMS分布式困难，NoSQL则比较容易。
 </code></pre>
 <h2 id="11，简单说一说drop、delete与truncate的区别。"><a href="#11，简单说一说drop、delete与truncate的区别。" class="headerlink" title="11，简单说一说drop、delete与truncate的区别。"></a>11，简单说一说<code>drop</code>、<code>delete</code>与<code>truncate</code>的区别。</h2><pre class=" language-markdown"><code class="language-markdown">这三者都是表达删除的意思。区别如下：
-1、drop语句是删除表的结构，以及被依赖的约束，触发器，索引；依赖于该表的存储过程/函数将保留，但会变为invalid(无效的)状态；truncate和delete只删除数据不删除表的结构;
-2、delete语句是dml(数据操作语言),这个操作在事务提交后才生效，可以回滚，如果有相应的触发器，那么在执行的时候会被触发；而drop和truncate是ddl(数据定义语言)，操作立即生效，不能回滚，操作不触发触发器;
-3、在速度上来说：drop>truncate>delete。
+1、drop是删除表；delete删除的是表中数据，常与where配合使用；truncate是重置表，它会删除数据，将表中的自增值重置。
+2、在速度上来说：drop>truncate>delete。
+
 使用场景：
 不再需要一张表时用drop删除；当要删除部分数据时用delete配合where字句；想要保留表而将所有数据删除并且和事务无关的话用truncate，和事务有关时用delete。
 </code></pre>
