@@ -310,7 +310,7 @@
         <hr>
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="1，Django、Flask、Tornado的对比"><a href="#1，Django、Flask、Tornado的对比" class="headerlink" title="1，Django、Flask、Tornado的对比"></a>1，<code>Djang</code>o、<code>Flask</code>、<code>Tornado</code>的对比</h2><pre class=" language-markdown"><code class="language-markdown">1,Django走的是大而全的方向，开发效率高。它的MTV框架，自带ORM，admin后台管理，自带的splite数据库和开发测试用的服务器，给开发之提高了超高的开发效率。
+                <h2 id="1，Django、Flask、Tornado的对比"><a href="#1，Django、Flask、Tornado的对比" class="headerlink" title="1，Django、Flask、Tornado的对比"></a>1，<code>Django</code>、<code>Flask</code>、<code>Tornado</code>的对比</h2><pre class=" language-markdown"><code class="language-markdown">1,Django走的是大而全的方向，开发效率高。它的MTV框架，自带ORM，admin后台管理，自带的splite数据库和开发测试用的服务器，给开发之提高了超高的开发效率。
 2，Flask是轻量级的框架，自由，灵活，可拓展性强，核心基于werkzeug WSGI工具和jinja2模板引擎
 3，Tornado走的是少而精的方向，性能优越。它最出名的是异步非阻塞的设计方式。它的两大核心模块：
 <span class="token code keyword">    a:iostraem:对非阻塞式的socket进行简单的封装</span>
@@ -348,7 +348,7 @@ view视图函数，返回rsponse。再交给response中间件做收尾工作。
 4、session的实现依赖于session<span class="token italic"><span class="token punctuation">_</span>id,而session<span class="token punctuation">_</span></span>id又是保存在cookie中，索引session是依赖于cookie而存在的一种数据存储形式。
 </code></pre>
 <h2 id="6，请简要说明django框架中视图的作用？"><a href="#6，请简要说明django框架中视图的作用？" class="headerlink" title="6，请简要说明django框架中视图的作用？"></a>6，请简要说明django框架中<code>视图</code>的作用？</h2><pre class=" language-markdown"><code class="language-markdown">它的作用就是先定义好各类对象所需功能的函数，然后接收请求，处理业务逻辑，返回结果。
-其中每一个视图函数都对应着一个url请求。
+其中每一个视图函数都对应着一个url。
 </code></pre>
 <h2 id="7，Django中查询QuerySet时什么情况下用Q"><a href="#7，Django中查询QuerySet时什么情况下用Q" class="headerlink" title="7，Django中查询QuerySet时什么情况下用Q?"></a>7，Django中查询<code>QuerySet</code>时什么情况下用Q?</h2><pre class=" language-markdown"><code class="language-markdown">QuerySet是django的查询集。我们一般使用filter()、exclude()来进行按单一条件查询。
 当我们需要进行复杂的查询时，比如两个条件是and或者or,这时上面两个方法就不适合了。
@@ -405,7 +405,7 @@ T，template,模板，将返回的结果渲染成页面展示。
 </code></pre>
 <h2 id="17，什么是WSGI-uwsgi-uWSGI。"><a href="#17，什么是WSGI-uwsgi-uWSGI。" class="headerlink" title="17，什么是WSGI,uwsgi,uWSGI。"></a>17，什么是<code>WSGI</code>,<code>uwsgi</code>,<code>uWSGI</code>。</h2><pre class=" language-markdown"><code class="language-markdown">WSGI(Web Server Gateway Interface)是web服务器网关接口,是一种描述web服务器如何与web程序通信的规范；
 
-uWSGI是一个全功能的HTTP服务器，实现了WSGI协议、uwsgi协议、HTTP协议。它的作用就是把http协议转化成语言支持的网络协议；
+uWSGI是一个全功能的HTTP服务器，实现了WSGI协议、uwsgi协议、HTTP协议等。比如把http协议转化成WSGI协议,让python可以之间使用。
 
 uwsgi是uWSGI服务器的独占通信协议，用于定于传输信息类型。
 
@@ -415,11 +415,23 @@ CBV(class base views) : 基于类的视图；
 
 当用户发送url请求，Django会一次遍历路由映射表中的所有记录，一旦有一条记录匹配成功就执行相对于的函数，并且不再继续匹配记录，这就是FBV的执行流程。
 
-当服务端使用CBV模式时，用户发送给服务端的请求包含url和method，这两个信息都是字符串类型，然后服务端会通过路由映射表匹配成功后会自动去找dispatch(调度)方法，接下来Django通过dispatch反射的方式找到类相对应的方法并执行，执行完毕返回数据给dispatch方法，有dispatch方法将数据返回给客户端。
+当服务端使用CBV模式时，用户发送给服务端的请求包含url和method，这两个信息都是字符串类型，然后服务端会通过路由映射表匹配成功后会自动去找dispatch(调度)方法，接下来Django通过dispatch反射的方式找到类相对应的方法并执行，执行完毕返回数据给dispatch方法，由dispatch方法将数据返回给客户端。
 
 使用CBV的优点如下：
 1、提高了代码的复用性，可以使用面向对象技术，比如多继承；
-2、可以对不同的http请求用不同的函数处理，提高代码的可读性。
+2、可以用不同的函数对不同的HTTP方法处理，提高代码的可读性。
+</code></pre>
+<h2 id="19，django中实现csrf的机制。"><a href="#19，django中实现csrf的机制。" class="headerlink" title="19，django中实现csrf的机制。"></a>19，django中实现csrf的机制。</h2><pre class=" language-markdown"><code class="language-markdown">csrf是跨站请求伪造，可以盗用你的身份对浏览器发送恶意请求并得到响应。它的机制分为3步：
+1、django第一次响应某个客户端的请求时，后端随机生成一个token值，后端把这个token值存在session状态中，同时把token值放到cookie里交给浏览器；
+2、浏览器第二次请求时把cookie中的token值加入请求头信息中，一起传给后端；Cookies:{csrftoken:xxxxxxx}
+3、服务器接收请求，将session中的token值与cookie中的token值验证。如果一致返回响应，不一致返回403 Forbidden。
+</code></pre>
+<h2 id="20，基于django中使用ajax发送post请求时，都可以使用哪种方法携带csrf-token。"><a href="#20，基于django中使用ajax发送post请求时，都可以使用哪种方法携带csrf-token。" class="headerlink" title="20，基于django中使用ajax发送post请求时，都可以使用哪种方法携带csrf token。"></a>20，基于django中使用ajax发送post请求时，都可以使用哪种方法携带csrf token。</h2><pre class=" language-markdown"><code class="language-markdown">1、后端将csrftoken值发送给前端，使用post请求时再带上这个值：
+  data:{csrfmiddlewaretoken:'{{ csrf_token }}'}
+2、获取form表单中隐藏标签的csrftoken值，加入到请求数据发送给服务端：
+  data:{csrfmiddlewaretoken:$('[name="csrfmiddlewaretoken"]').val()}
+3、在cookie中保存csrftoken值，发送请求时将值放在请求头：
+  headers:{"X-CSRFtoken":$.cookie("csrftoken")}
 </code></pre>
 
             </div>
