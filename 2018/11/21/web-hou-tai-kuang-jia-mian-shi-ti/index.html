@@ -326,7 +326,7 @@ C是控制器，controller，用于接收请求，处理业务逻辑，与model�
 M是模型，model，与MVC中的M功能一样，负责和数据库交互；
 V是视图，view，与MVC中的C功能一样，先定义好对象所需要的功能函数，再负责接收请求，处理业务逻辑，然后返回结果；
 T是模板，template，与MVC中的V功能一样，负责生成页面，展示给用户看。
-此外django中还有urls分发器，将不同的url分发给不同的view处理。
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>此外django中还有urls分发器，将不同的url分发给不同的view处理</span><span class="token punctuation">></span></span>
 </code></pre>
 <h2 id="3，django中如何读取和保存session，整个session运行机制是什么？"><a href="#3，django中如何读取和保存session，整个session运行机制是什么？" class="headerlink" title="3，django中如何读取和保存session，整个session运行机制是什么？"></a>3，<code>django</code>中如何读取和保存<code>session</code>，整个<code>session</code>运行机制是什么？</h2><pre class=" language-markdown"><code class="language-markdown">在django中使用 request.session['order<span class="token italic"><span class="token punctuation">_</span>id'] = order<span class="token punctuation">_</span></span>id 来保存session，使用   session.get来读取session。(可以使用del request.session['order<span class="token italic"><span class="token punctuation">_</span>id']删除，如果key不存在会报错；request.session.clear()清除所有会话，但是数据保留；request.session.flush()删除当前的会话数据)
 session将信息以加密的方式存储在服务器端，然后将一个 session<span class="token punctuation">_</span></span>id 交给浏览器中的cookie保存，当我们需要数据时，就将cookie中的session<span class="token italic"><span class="token punctuation">_</span>id发送给服务器，这样服务器端根据这个session<span class="token punctuation">_</span></span>id相对安全的在数据库中查询用户的信息。
