@@ -391,7 +391,7 @@ T，template,模板，将返回的结果渲染成页面展示。
 </code></pre>
 <h2 id="14，Django路由系统中name的作用？"><a href="#14，Django路由系统中name的作用？" class="headerlink" title="14，Django路由系统中name的作用？"></a>14，Django路由系统中<code>name</code>的作用？</h2><pre class=" language-markdown"><code class="language-markdown">可以用于反向解析路由，相当于给url取别名，当url改变时，我们依然可以根据这个别名找到该条url。
 </code></pre>
-<h2 id="15，什么时中间件并简述其作用？"><a href="#15，什么时中间件并简述其作用？" class="headerlink" title="15，什么时中间件并简述其作用？"></a>15，什么时中间件并简述其作用？</h2><pre class=" language-markdown"><code class="language-markdown">Django的中间件是一个轻量级，底层的插件系统，可以介入Django请求和响应处理过程，修改Django的输入和输出。在Django中每个中间件按照顺序执行不同的功能。中间件的工作过程如下：
+<h2 id="15，什么是中间件并简述其作用？"><a href="#15，什么是中间件并简述其作用？" class="headerlink" title="15，什么是中间件并简述其作用？"></a>15，什么是中间件并简述其作用？</h2><pre class=" language-markdown"><code class="language-markdown">Django的中间件是一个轻量级，底层的插件系统，可以介入Django请求和响应处理过程，修改Django的输入和输出。在Django中每个中间件按照顺序执行不同的功能。中间件的工作过程如下：
 1、一个请求按照从上往下的顺序进入中间件，调用process<span class="token italic"><span class="token punctuation">_</span>request方法；
 2、然后被中间件的process<span class="token punctuation">_</span></span>view方法处理，调用view.py文件；
 3、在调用视图函数时如果出错，则从下往上调用process<span class="token italic"><span class="token punctuation">_</span>exception方法，把错误信息通过
