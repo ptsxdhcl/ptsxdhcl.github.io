@@ -328,7 +328,7 @@ V是视图，view，与MVC中的C功能一样，先定义好对象所需要的�
 T是模板，template，与MVC中的V功能一样，负责生成页面，展示给用户看。
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>此外django中还有urls分发器，将不同的url分发给不同的view处理</span><span class="token punctuation">></span></span>
 </code></pre>
-<h2 id="3，django中如何读取和保存session，整个session运行机制是什么？"><a href="#3，django中如何读取和保存session，整个session运行机制是什么？" class="headerlink" title="3，django中如何读取和保存session，整个session运行机制是什么？"></a>3，<code>django</code>中如何读取和保存<code>session</code>，整个<code>session</code>运行机制是什么？</h2><pre class=" language-markdown"><code class="language-markdown">在django中使用 request.session['order<span class="token italic"><span class="token punctuation">_</span>id'] = order<span class="token punctuation">_</span></span>id 来保存session，使用   session.get来读取session。(可以使用del request.session['order<span class="token italic"><span class="token punctuation">_</span>id']删除，如果key不存在会报错；request.session.clear()清除所有会话，但是数据保留；request.session.flush()删除当前的会话数据)
+<h2 id="3，django中如何读取和保存session，整个session运行机制是什么？"><a href="#3，django中如何读取和保存session，整个session运行机制是什么？" class="headerlink" title="3，django中如何读取和保存session，整个session运行机制是什么？"></a>3，<code>django</code>中如何读取和保存<code>session</code>，整个<code>session</code>运行机制是什么？</h2><pre class=" language-markdown"><code class="language-markdown">在django中使用 request.session['order<span class="token italic"><span class="token punctuation">_</span>id'] = order<span class="token punctuation">_</span></span>id 来保存session，使用 session.get来读取session。(可以使用del request.session['order<span class="token italic"><span class="token punctuation">_</span>id']删除，如果key不存在会报错；request.session.clear()清除所有会话，但是数据保留；request.session.flush()删除当前的会话数据)
 session将信息以加密的方式存储在服务器端，然后将一个 session<span class="token punctuation">_</span></span>id 交给浏览器中的cookie保存，当我们需要数据时，就将cookie中的session<span class="token italic"><span class="token punctuation">_</span>id发送给服务器，这样服务器端根据这个session<span class="token punctuation">_</span></span>id相对安全的在数据库中查询用户的信息。
 </code></pre>
 <h2 id="4，简述django对http请求的执行流程。"><a href="#4，简述django对http请求的执行流程。" class="headerlink" title="4，简述django对http请求的执行流程。"></a>4，简述django对http请求的执行流程。</h2><p><a href="https://www.jianshu.com/p/a2bf34b89d01" target="_blank" rel="noopener">点击查看详情</a></p>
@@ -384,14 +384,16 @@ view视图函数，返回rsponse。再交给response中间件做收尾工作。
 <h2 id="12，Flask-WTF是什么，有什么特点？"><a href="#12，Flask-WTF是什么，有什么特点？" class="headerlink" title="12，Flask-WTF是什么，有什么特点？"></a>12，<code>Flask-WTF</code>是什么，有什么特点？</h2><pre class=" language-markdown"><code class="language-markdown">Flask-WTF是一个用于表单处理，校验并且提供CSRF验证功能的集成WTForms。
 它能够使表单不受CSRF(跨站请求伪造)的攻击。
 </code></pre>
-<h2 id="13，Django-作为一个-Web-开发框架，它包括哪些基本组成部分："><a href="#13，Django-作为一个-Web-开发框架，它包括哪些基本组成部分：" class="headerlink" title="13，Django 作为一个 Web 开发框架，它包括哪些基本组成部分："></a>13，Django 作为一个 Web 开发框架，它包括哪些基本组成部分：</h2><pre class=" language-markdown"><code class="language-markdown">django是一种基于MVT的框架，所有基本由三个部分组成：
-M:model,模型，负责和数据库交互，其ORM(对象-关系映射)可以让我们不书写SQL语句便可以操作数据库；
+<h2 id="13，Django-作为一个-Web-开发框架，它包括哪些基本组成部分："><a href="#13，Django-作为一个-Web-开发框架，它包括哪些基本组成部分：" class="headerlink" title="13，Django 作为一个 Web 开发框架，它包括哪些基本组成部分："></a>13，Django 作为一个 Web 开发框架，它包括哪些基本组成部分：</h2><pre class=" language-markdown"><code class="language-markdown">一个django项目由以下几个组成：
+url.py、view.py、model.py、admin.py、settings.py、templates
+django是一种基于MVT的框架，所有基本由三个部分组成：
+M:model,模型，负责和数据库交互，其ORM(对象-关系映射)组件可以让我们不书写SQL语句便可以操作数据库；
 V:view,视图，负责处理业务逻辑，接收http请求，匹配url，调用视图函数，返回结果；
 T，template,模板，将返回的结果渲染成页面展示。
 </code></pre>
 <h2 id="14，Django路由系统中name的作用？"><a href="#14，Django路由系统中name的作用？" class="headerlink" title="14，Django路由系统中name的作用？"></a>14，Django路由系统中<code>name</code>的作用？</h2><pre class=" language-markdown"><code class="language-markdown">可以用于反向解析路由，相当于给url取别名，当url改变时，我们依然可以根据这个别名找到该条url。
 </code></pre>
-<h2 id="15，什么是中间件并简述其作用？"><a href="#15，什么是中间件并简述其作用？" class="headerlink" title="15，什么是中间件并简述其作用？"></a>15，什么是中间件并简述其作用？</h2><pre class=" language-markdown"><code class="language-markdown">Django的中间件是一个轻量级，底层的插件系统，可以介入Django请求和响应处理过程，修改Django的输入和输出。在Django中每个中间件按照顺序执行不同的功能。中间件的工作过程如下：
+<h2 id="15，什么是中间件并简述其作用？"><a href="#15，什么是中间件并简述其作用？" class="headerlink" title="15，什么是中间件并简述其作用？"></a>15，什么是中间件并简述其作用？</h2><pre class=" language-markdown"><code class="language-markdown">Django的中间件是一个轻量级，底层的插件系统，就是一个类。可以介入Django请求和响应处理过程，修改Django的输入和输出。在Django中每个中间件按照顺序执行不同的功能。中间件的工作过程如下：
 1、一个请求按照从上往下的顺序进入中间件，调用process<span class="token italic"><span class="token punctuation">_</span>request方法；
 2、然后被中间件的process<span class="token punctuation">_</span></span>view方法处理，调用view.py文件；
 3、在调用视图函数时如果出错，则从下往上调用process<span class="token italic"><span class="token punctuation">_</span>exception方法，把错误信息通过
