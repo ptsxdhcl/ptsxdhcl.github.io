@@ -381,7 +381,7 @@ re.compile是将正则表达式编译成一个对象，加快匹配速度，并�
 <h2 id="13，python是如何进行内存管理的？"><a href="#13，python是如何进行内存管理的？" class="headerlink" title="13，python是如何进行内存管理的？"></a>13，<code>python</code>是如何进行内存管理的？</h2><p><a href="https://www.cnblogs.com/geaozhang/p/7111961.html" target="_blank" rel="noopener">点击查看</a></p>
 <pre class=" language-markdown"><code class="language-markdown">python内部使用引用计数，来保持追踪内存中的对象，python内部记录了对象有多少个引用，即引用计数，当对象被创建时就创建一个引用计数，当对象不再需要时，这个对象的引用计数为0，它被垃圾回收。
 </code></pre>
-<h2 id="14，什么是lambda函数，它有什么好处？"><a href="#14，什么是lambda函数，它有什么好处？" class="headerlink" title="14，什么是lambda函数，它有什么好处？"></a>14，什么是<code>lambda函数</code>，它有什么好处？</h2><pre class=" language-markdown"><code class="language-markdown">lambda函数是一个可以接收另意多个参数（包括可选参数）并返回单个表达式值的匿名函数。如：lambda x,y:x + y  获取下，y两个参数的和的lambda函数。
+<h2 id="14，什么是lambda函数，它有什么好处？"><a href="#14，什么是lambda函数，它有什么好处？" class="headerlink" title="14，什么是lambda函数，它有什么好处？"></a>14，什么是<code>lambda函数</code>，它有什么好处？</h2><pre class=" language-markdown"><code class="language-markdown">lambda函数是一个可以接收另意多个参数（包括可选参数）并返回单个表达式值的匿名函数。如：lambda x,y:x + y  获取x，y两个参数的和的lambda函数。
 好处：1、lambda函数比较轻便，即用即删除；2、一般用来给filter，map这样的函数式编程服务；3、作为回调函数，传递给某些应用，比如消息处理。
 缺点:更复杂的操作不适合，可读性不高。
 </code></pre>
