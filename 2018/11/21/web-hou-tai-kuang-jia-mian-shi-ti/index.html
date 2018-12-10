@@ -331,7 +331,7 @@ T是模板，template，与MVC中的V功能一样，负责生成页面，展示�
 <h2 id="3，django中如何读取和保存session，整个session运行机制是什么？"><a href="#3，django中如何读取和保存session，整个session运行机制是什么？" class="headerlink" title="3，django中如何读取和保存session，整个session运行机制是什么？"></a>3，<code>django</code>中如何读取和保存<code>session</code>，整个<code>session</code>运行机制是什么？</h2><pre class=" language-markdown"><code class="language-markdown">在django中使用 request.session['order<span class="token italic"><span class="token punctuation">_</span>id'] = order<span class="token punctuation">_</span></span>id 来保存session，使用 session.get来读取session。(可以使用del request.session['order<span class="token italic"><span class="token punctuation">_</span>id']删除，如果key不存在会报错；request.session.clear()清除所有会话，但是数据保留；request.session.flush()删除当前的会话数据)
 session将信息以加密的方式存储在服务器端，然后将一个 session<span class="token punctuation">_</span></span>id 交给浏览器中的cookie保存，当我们需要数据时，就将cookie中的session<span class="token italic"><span class="token punctuation">_</span>id发送给服务器，这样服务器端根据这个session<span class="token punctuation">_</span></span>id相对安全的在数据库中查询用户的信息。
 </code></pre>
-<h2 id="4，简述django对http请求的执行流程。"><a href="#4，简述django对http请求的执行流程。" class="headerlink" title="4，简述django对http请求的执行流程。"></a>4，简述django对http请求的执行流程。</h2><p><a href="https://www.jianshu.com/p/a2bf34b89d01" target="_blank" rel="noopener">点击查看详情</a></p>
+<h2 id="4，简述django对http请求的执行流程。"><a href="#4，简述django对http请求的执行流程。" class="headerlink" title="4，简述django对http请求的执行流程。"></a>4，简述django对http请求的执行流程。</h2><p><img src="https://upload-images.jianshu.io/upload_images/260723-033f4db0fc89e522.png?imageMogr2/auto-orient/" alt="点击查看详情"></p>
 <pre class=" language-markdown"><code class="language-markdown">分为以下几个步骤：
 1、将http请求打包一个HttpRequest对象，交给Request中间件处理；
 2、如果处理的结果时一个response，则将response传给response中间件，返回http响应；
