@@ -5,15 +5,11 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="爬虫面试题, python">
-    <meta name="description" content="1，简述一下爬虫的步骤。1、确定需求；
-2、确定资源；
-3、通过url获取网站的返回数据；
-4、定位数据；
-5、存储数据。
-
-2，遇到反爬机制怎么处理？反爬机制:headers方向
-判断User-Agent、判断Referer、判断Cook">
+    <meta name="keywords" content="排序问题, python">
+    <meta name="description" content="1,快速排序
+def QuitSort(array,left=0,right=None):
+    arrayLen = len(array)   # 数组的长度
+    if arrayLen &amp;lt;= 1:   #长度为1 的话 或者">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -21,7 +17,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>爬虫面试题 | xu yichen</title>
+    <title>排序问题 | xu yichen</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -256,13 +252,13 @@
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        爬虫面试题
+                        排序问题
                     </div>
                 </div>
             </div>
@@ -282,12 +278,8 @@
             
             <div class="article-tag">
                 
-                <a href="/tags/python/" target="_blank">
-                    <span class="chip bg-color">python</span>
-                </a>
-                
-                <a href="/tags/爬虫/" target="_blank">
-                    <span class="chip bg-color">爬虫</span>
+                <a href="/tags/排序/" target="_blank">
+                    <span class="chip bg-color">排序</span>
                 </a>
                 
             </div>
@@ -297,96 +289,84 @@
                 <span class="post-cate">
                     <i class="fa fa-bookmark fa-fw icon-category"></i>
                     
-                    <a href="/categories/python爬虫/" class="post-category" target="_blank">
-                        python爬虫
+                    <a href="/categories/排序/" class="post-category" target="_blank">
+                        排序
                     </a>
                     
-                    <a href="/categories/python爬虫/面试题/" class="post-category" target="_blank">
-                        面试题
+                    <a href="/categories/排序/算法/" class="post-category" target="_blank">
+                        算法
                     </a>
                     
                 </span>
                 
 
                 <span class="post-date">
-                    <i class="fa fa-clock-o fa-fw"></i>2018-12-10
+                    <i class="fa fa-clock-o fa-fw"></i>2018-12-12
                 </span>
             </div>
         </div>
         <hr>
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="1，简述一下爬虫的步骤。"><a href="#1，简述一下爬虫的步骤。" class="headerlink" title="1，简述一下爬虫的步骤。"></a>1，简述一下爬虫的步骤。</h2><pre class=" language-markdown"><code class="language-markdown">1、确定需求；
-2、确定资源；
-3、通过url获取网站的返回数据；
-4、定位数据；
-5、存储数据。
-</code></pre>
-<h2 id="2，遇到反爬机制怎么处理？"><a href="#2，遇到反爬机制怎么处理？" class="headerlink" title="2，遇到反爬机制怎么处理？"></a>2，遇到反爬机制怎么处理？</h2><pre class=" language-markdown"><code class="language-markdown">反爬机制:headers方向
-判断User-Agent、判断Referer、判断Cookie。
-将浏览器的headers信息全部添加进去
-注意：Accept-Encoding；gzip,deflate需要注释掉
-</code></pre>
-<h2 id="3，常见的HTTP方法有哪些？"><a href="#3，常见的HTTP方法有哪些？" class="headerlink" title="3，常见的HTTP方法有哪些？"></a>3，常见的HTTP方法有哪些？</h2><pre class=" language-markdown"><code class="language-markdown">GET：请求指定的页面信息，返回实体主体；
-HEAD:类似于get请求，只不过返回的响应中没有具体的内容，用于捕获报头；
-POST：向指定资源提交数据进行处理请求(比如表单提交或者上传文件)，。数据被包含在请求体中。
-PUT:从客户端向服务端传送数据取代指定的文档的内容；
-DELETE：请求删除指定的页面；
-CONNNECT：HTTP1.1协议中预留给能够将连接方式改为管道方式的代理服务器；
-OPTIONS:允许客户端查看服务器的性能；
-TRACE：回显服务器的请求，主要用于测试或者诊断。
-</code></pre>
-<h2 id="4，说一说redis-scrapy中redis的作用。"><a href="#4，说一说redis-scrapy中redis的作用。" class="headerlink" title="4，说一说redis-scrapy中redis的作用。"></a>4，说一说redis-scrapy中<code>redis</code>的作用。</h2><pre class=" language-markdown"><code class="language-markdown">它是将scrapy框架中Scheduler替换为redis数据库，实现队列管理共享。
-优点：
-  1、可以充分利用多台机器的带宽；
-  2、可以充分利用多台机器的IP地址。
-</code></pre>
-<h2 id="5，遇到的反爬虫策略以及解决方法。"><a href="#5，遇到的反爬虫策略以及解决方法。" class="headerlink" title="5，遇到的反爬虫策略以及解决方法。"></a>5，遇到的反爬虫策略以及解决方法。</h2><pre class=" language-markdown"><code class="language-markdown">1、通过headers反爬虫：自定义headers，添加网页中的headers数据。
-2、基于用户行为的反爬虫(封IP)：可以使用多个代理IP爬取或者将爬取的频率降低。
-3、动态网页反爬虫(JS或者Ajax请求数据)：动态网页可以使用 selenium + phantomjs 抓取。
-4、对部分数据加密处理(数据乱码):找到加密方法进行逆向推理。
-</code></pre>
-<h2 id="6，如果让你来防范网站爬虫，你应该怎么来提高爬取的难度-？"><a href="#6，如果让你来防范网站爬虫，你应该怎么来提高爬取的难度-？" class="headerlink" title="6，如果让你来防范网站爬虫，你应该怎么来提高爬取的难度 ？"></a>6，如果让你来防范网站爬虫，你应该怎么来提高爬取的难度 ？</h2><pre class=" language-markdown"><code class="language-markdown">1、判断headers的User-Agent；
-2、检测同一个IP的访问频率；
-3、数据通过Ajax获取；
-4、爬取行为是对页面的源文件爬取，如果要爬取静态网页的html代码，可以使用jquery去模仿写html。
-</code></pre>
-<h2 id="7，urllib和urllib2的区别？"><a href="#7，urllib和urllib2的区别？" class="headerlink" title="7，urllib和urllib2的区别？"></a>7，<code>urllib</code>和<code>urllib2</code>的区别？</h2><pre class=" language-markdown"><code class="language-markdown">这两个都是接收url请求的模块。两者常常配合一块使用，但是功能不一样。
-1、urllib2可以接收一个Request类的实例来设置url请求的headers；而urllib只能接收url，因此不能伪装User-Agent字符串。
-2、urllib提供了urlencode方法用来get查询字符串的产生，而urllib2没有。
-</code></pre>
-<h2 id="8，scrapy分为几个组成部分？分别有什么作用？"><a href="#8，scrapy分为几个组成部分？分别有什么作用？" class="headerlink" title="8，scrapy分为几个组成部分？分别有什么作用？"></a>8，scrapy分为几个组成部分？分别有什么作用？</h2><pre class=" language-markdown"><code class="language-markdown">分为5个部分；Spiders(爬虫类)，Scrapy Engine(引擎),Scheduler(调度器),Downloader(下载器),Item Pipeline(处理管道)。
-Spiders:开发者自定义的一个类，用来解析网页并抓取指定url返回的内容。
-Scrapy Engine:控制整个系统的数据处理流程，并进行事务处理的触发。
-Scheduler：接收Engine发出的requests，并将这些requests放入到处理列队中，以便之后engine需要时再提供。
-Download：抓取网页信息提供给engine，进而转发至Spiders。
-Item Pipeline:负责处理Spiders类提取之后的数据。
-比如清理HTML数据、验证爬取的数据(检查item包含某些字段)、查重(并丢弃)、将爬取结果保存到数据库中
-</code></pre>
-<h2 id="9，简述一下scrapy的基本流程。"><a href="#9，简述一下scrapy的基本流程。" class="headerlink" title="9，简述一下scrapy的基本流程。"></a>9，简述一下scrapy的基本流程。</h2><p><img src="https://image-static.segmentfault.com/281/666/2816666215-5a25a21f9f37d_articlex" alt="请看大图"></p>
-<pre><code>scrapy分为9个步骤。
-1、Spiders需要初始的start_url或则函数stsrt_requests,会在内部生成Requests给Engine；
-2、Engine将requests发送给Scheduler;
-3、Engine从Scheduler那获取requests,交给Download下载；
-4、在交给Dowmload过程中会经过Downloader Middlewares(经过process_request函数)；
-5、Dowmloader下载页面后生成一个response，这个response会传给Engine，这个过程中又经过了Downloader Middlerwares(经过process_request函数)，在传送中出错的话经过process_exception函数；
-6、Engine将从Downloader那传送过来的response发送给Spiders处理，这个过程经过Spiders Middlerwares(经过process_spider_input函数)；
-7、Spiders处理这个response，返回Requests或者Item两个类型，传给Engine，这个过程又经过Spiders Middlewares(经过porcess_spider_output函数)；
-8、Engine接收返回的信息，如果使Item，将它传给Items Pipeline中；如果是Requests,将它传给Scheduler，继续爬虫；
-9、重复第三步，直至没有任何需要爬取的数据
+                <h2 id="1-快速排序"><a href="#1-快速排序" class="headerlink" title="1,快速排序"></a>1,快速排序</h2><pre class=" language-python"><code class="language-python">
+<span class="token keyword">def</span> <span class="token function">QuitSort</span><span class="token punctuation">(</span>array<span class="token punctuation">,</span>left<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span>right<span class="token operator">=</span>None<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    arrayLen <span class="token operator">=</span> len<span class="token punctuation">(</span>array<span class="token punctuation">)</span>   <span class="token comment" spellcheck="true"># 数组的长度</span>
+    <span class="token keyword">if</span> arrayLen <span class="token operator">&lt;=</span> <span class="token number">1</span><span class="token punctuation">:</span>   <span class="token comment" spellcheck="true">#长度为1 的话 或者 空 的话 直接返回 数组</span>
+        <span class="token keyword">return</span> array
+    <span class="token keyword">if</span> right <span class="token operator">==</span> None<span class="token punctuation">:</span>
+        right <span class="token operator">=</span> arrayLen <span class="token operator">-</span> <span class="token number">1</span> <span class="token comment" spellcheck="true"># 索引</span>
+    <span class="token keyword">if</span> left <span class="token operator">&lt;</span> right<span class="token punctuation">:</span>
+        poivt <span class="token operator">=</span> Partition<span class="token punctuation">(</span>array<span class="token punctuation">,</span>left<span class="token punctuation">,</span>right<span class="token punctuation">)</span>
+        QuitSort<span class="token punctuation">(</span>array<span class="token punctuation">,</span>left<span class="token punctuation">,</span>poivt<span class="token number">-1</span><span class="token punctuation">)</span>
+        QuitSort<span class="token punctuation">(</span>array<span class="token punctuation">,</span>poivt<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span>right<span class="token punctuation">)</span>
 
-</code></pre><h2 id="10，常见的页面数据抽取方式有哪些？"><a href="#10，常见的页面数据抽取方式有哪些？" class="headerlink" title="10，常见的页面数据抽取方式有哪些？"></a>10，常见的页面数据抽取方式有哪些？</h2><pre class=" language-python"><code class="language-python">xpath
-re
-beautfulsoup4
-jsonpath
-cssselector
+<span class="token keyword">def</span> <span class="token function">Partition</span><span class="token punctuation">(</span>array<span class="token punctuation">,</span>left<span class="token punctuation">,</span>right<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    value <span class="token operator">=</span> array<span class="token punctuation">[</span>right<span class="token punctuation">]</span>
+    i <span class="token operator">=</span> left <span class="token operator">-</span> <span class="token number">1</span>
+    <span class="token keyword">for</span> j <span class="token keyword">in</span> range<span class="token punctuation">(</span>left<span class="token punctuation">,</span>right<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> array<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">&lt;=</span> value<span class="token punctuation">:</span>
+            i <span class="token operator">+=</span> <span class="token number">1</span>
+            array<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span>array<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> array<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">,</span>array<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+    array<span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>array<span class="token punctuation">[</span>right<span class="token punctuation">]</span> <span class="token operator">=</span> array<span class="token punctuation">[</span>right<span class="token punctuation">]</span><span class="token punctuation">,</span>array<span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span>
+    <span class="token keyword">return</span> i<span class="token operator">+</span><span class="token number">1</span>
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    array <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">14</span><span class="token punctuation">,</span><span class="token number">33</span><span class="token punctuation">,</span><span class="token number">27</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">35</span><span class="token punctuation">,</span><span class="token number">19</span><span class="token punctuation">,</span><span class="token number">42</span><span class="token punctuation">,</span><span class="token number">44</span><span class="token punctuation">]</span>
+    QuitSort<span class="token punctuation">(</span>array<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"排序结束："</span><span class="token punctuation">,</span>array<span class="token punctuation">)</span>
 </code></pre>
-<h2 id="11，是否搭建过爬虫集群，集群是如何实现节点发现和管理的？"><a href="#11，是否搭建过爬虫集群，集群是如何实现节点发现和管理的？" class="headerlink" title="11，是否搭建过爬虫集群，集群是如何实现节点发现和管理的？"></a>11，是否搭建过爬虫集群，集群是如何实现节点发现和管理的？</h2><pre class=" language-markdown"><code class="language-markdown">
+<h2 id="2，归并排序"><a href="#2，归并排序" class="headerlink" title="2，归并排序"></a>2，归并排序</h2><pre class=" language-python"><code class="language-python">
+<span class="token keyword">def</span> <span class="token function">MergeSort</span><span class="token punctuation">(</span>array<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    arrayLen <span class="token operator">=</span> len<span class="token punctuation">(</span>array<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> arrayLen <span class="token operator">&lt;=</span> <span class="token number">1</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> array
+    middleNum <span class="token operator">=</span> arrayLen <span class="token operator">//</span> <span class="token number">2</span>
+    leftArray <span class="token operator">=</span> MergeSort<span class="token punctuation">(</span>array<span class="token punctuation">[</span><span class="token punctuation">:</span>middleNum<span class="token punctuation">]</span><span class="token punctuation">)</span>
+    rightArray <span class="token operator">=</span> MergeSort<span class="token punctuation">(</span>array<span class="token punctuation">[</span>middleNum<span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    retArray <span class="token operator">=</span> MergeCore<span class="token punctuation">(</span>leftArray<span class="token punctuation">,</span>rightArray<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> retArray
 
-</code></pre>
-<h2 id="12，遇到过哪些反爬的案例，分别是如何解决的（不限一种）。"><a href="#12，遇到过哪些反爬的案例，分别是如何解决的（不限一种）。" class="headerlink" title="12，遇到过哪些反爬的案例，分别是如何解决的（不限一种）。"></a>12，遇到过哪些反爬的案例，分别是如何解决的（不限一种）。</h2><pre class=" language-markdown"><code class="language-markdown">
+<span class="token keyword">def</span> <span class="token function">MergeCore</span><span class="token punctuation">(</span>leftArray<span class="token punctuation">,</span>rightArray<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    leftPointer <span class="token operator">=</span> <span class="token number">0</span>
+    rightPointer <span class="token operator">=</span> <span class="token number">0</span>
+    leftLen <span class="token operator">=</span> len<span class="token punctuation">(</span>leftArray<span class="token punctuation">)</span>
+    rightLen <span class="token operator">=</span> len<span class="token punctuation">(</span>rightArray<span class="token punctuation">)</span>
+    retList <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">while</span> leftPointer <span class="token operator">&lt;</span> leftLen <span class="token operator">and</span> rightPointer <span class="token operator">&lt;</span> rightLen<span class="token punctuation">:</span>
+        <span class="token keyword">if</span> leftArray<span class="token punctuation">[</span>leftPointer<span class="token punctuation">]</span> <span class="token operator">&lt;</span> rightArray<span class="token punctuation">[</span>rightPointer<span class="token punctuation">]</span><span class="token punctuation">:</span>
+            retList<span class="token punctuation">.</span>append<span class="token punctuation">(</span>leftArray<span class="token punctuation">[</span>leftPointer<span class="token punctuation">]</span><span class="token punctuation">)</span>
+            leftPointer <span class="token operator">+=</span> <span class="token number">1</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            retList<span class="token punctuation">.</span>append<span class="token punctuation">(</span>rightArray<span class="token punctuation">[</span>rightPointer<span class="token punctuation">]</span><span class="token punctuation">)</span>
+            rightPointer <span class="token operator">+=</span><span class="token number">1</span>
+    retList<span class="token punctuation">.</span>extend<span class="token punctuation">(</span>leftArray<span class="token punctuation">[</span>leftPointer<span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    retList <span class="token operator">+=</span> rightArray<span class="token punctuation">[</span>rightPointer<span class="token punctuation">:</span><span class="token punctuation">]</span>
+    <span class="token keyword">return</span> retList
 
-
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    array <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">14</span><span class="token punctuation">,</span><span class="token number">33</span><span class="token punctuation">,</span><span class="token number">27</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">35</span><span class="token punctuation">,</span><span class="token number">19</span><span class="token punctuation">,</span><span class="token number">42</span><span class="token punctuation">,</span><span class="token number">44</span><span class="token punctuation">]</span>
+    retList <span class="token operator">=</span> MergeSort<span class="token punctuation">(</span>array<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"排序结束："</span><span class="token punctuation">,</span>retList<span class="token punctuation">)</span>
 </code></pre>
 
             </div>
@@ -526,7 +506,7 @@ cssselector
                     <span class="reprint-tip">转载请注明: </span>
                     <a href="http://ptsxdhcl.github.io" class="b-link-green">xu yichen</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2018/12/10/pa-chong-mian-shi-ti/" class="b-link-green">爬虫面试题</a>
+                    <a href="/2018/12/12/pai-xu-wen-ti/" class="b-link-green">排序问题</a>
                 </p>
             </div>
         </div>
@@ -546,7 +526,7 @@ cssselector
     <div class="row article-row">
         
         <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">上一篇</div>
+            <div class="article-badge left-badge text-color">本篇</div>
             <div class="card">
                 <a href="/2018/12/12/pai-xu-wen-ti/">
                     <div class="card-image">
@@ -563,9 +543,9 @@ def QuitSort(array,left=0,right=None):
     arrayLen = len(array)   # 数组的长度
     if arrayLen &lt;= 1:   #长度为1 的话 或者</div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-12
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-12
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -582,6 +562,7 @@ def QuitSort(array,left=0,right=None):
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -598,32 +579,37 @@ def QuitSort(array,left=0,right=None):
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">下一篇</div>
             <div class="card">
-                <a href="/2018/11/30/shu-ju-ku-mian-shi-ti/">
+                <a href="/2018/12/10/pa-chong-mian-shi-ti/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="数据库面试题">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="爬虫面试题">
                         
-                        <span class="card-title">数据库面试题</span>
+                        <span class="card-title">爬虫面试题</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">1，order by 和 group by 的区别？两者都是sql语句中的查询关键字。
-order by 用于对结果集按照一个列或者多个列进行排序。其中ASC是升序，DESC是降序排序。
-group by 用于集合聚合函数，根据一个列或者多</div>
+                    <div class="summary">1，简述一下爬虫的步骤。1、确定需求；
+2、确定资源；
+3、通过url获取网站的返回数据；
+4、定位数据；
+5、存储数据。
+
+2，遇到反爬机制怎么处理？反爬机制:headers方向
+判断User-Agent、判断Referer、判断Cook</div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-11-30
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-10
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/数据库/" class="post-category" target="_blank">
-                                    数据库
+                            <a href="/categories/python爬虫/" class="post-category" target="_blank">
+                                    python爬虫
                                 </a>
                             
-                            <a href="/categories/数据库/面试题/" class="post-category" target="_blank">
+                            <a href="/categories/python爬虫/面试题/" class="post-category" target="_blank">
                                     面试题
                                 </a>
                             
@@ -638,8 +624,8 @@ group by 用于集合聚合函数，根据一个列或者多</div>
                         <span class="chip bg-color">python</span>
                     </a>
                     
-                    <a href="/tags/数据库/" target="_blank">
-                        <span class="chip bg-color">数据库</span>
+                    <a href="/tags/爬虫/" target="_blank">
+                        <span class="chip bg-color">爬虫</span>
                     </a>
                     
                 </div>

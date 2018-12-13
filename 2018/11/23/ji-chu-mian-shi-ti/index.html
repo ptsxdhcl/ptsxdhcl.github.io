@@ -372,7 +372,13 @@ sys:sys模块可供访问由解释器使用或维护的变量与解释器进行�
 </code></pre>
 <h2 id="11，你熟悉正则表达式吗？正则中search-和match-的区别？以及re-compile的作用？"><a href="#11，你熟悉正则表达式吗？正则中search-和match-的区别？以及re-compile的作用？" class="headerlink" title="11，你熟悉正则表达式吗？正则中search()和match()的区别？以及re.compile的作用？"></a>11，你熟悉正则表达式吗？正则中<code>search()</code>和<code>match()</code>的区别？以及<code>re.compile</code>的作用？</h2><pre class=" language-markdown"><code class="language-markdown">正则表达式描述了一种字符串匹配的模式，可以用来检查一个串是否含有某种字串、将匹配的字串替换或者从某个串中提取出符合某个条件的字串等。
 
-两者都是正则表达式里的函数，search()匹配整个字符串，直到找到一个符合的匹配，如果找不到返回None；match()只匹配字符串的开始，如果一开始就不符合规则，返回None；两者都是匹配一次。
+两者都是正则表达式里的函数，
+search()匹配整个字符串，直到找到一个符合的匹配，如果找不到返回None；
+match()只匹配字符串的开始，如果一开始就不符合规则，返回None；两者都是匹配一次。
+
+补充：
+findall()匹配整个字符串找到所有符合表达式的字串，并以列表的形式返回，如果没有找到返回空列表[];
+finditer()于findall类似，不过返回的是一个迭代器。
 
 re.compile是将正则表达式编译成一个对象，加快匹配速度，并且可以重复使用。
 </code></pre>
