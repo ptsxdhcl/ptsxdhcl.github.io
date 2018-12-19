@@ -414,6 +414,18 @@ RDBMS分布式困难，NoSQL则比较容易。
 使用场景：
 不再需要一张表时用drop删除；当要删除部分数据时用delete配合where字句；想要保留表而将所有数据删除并且和事务无关的话用truncate，和事务有关时用delete。
 </code></pre>
+<h2 id="12，redis持久化。"><a href="#12，redis持久化。" class="headerlink" title="12，redis持久化。"></a>12，redis持久化。</h2><p><a href="https://blog.csdn.net/m0_38110132/article/details/76906422" target="_blank" rel="noopener">查看详情</a></p>
+<pre class=" language-markdown"><code class="language-markdown">redis数据都是保存在内存中的，如果没有设置持久化那么重启redis后数据会丢失。
+于是需要开启redis持久化功能，将数据保存在磁盘中，这样重启后可以从磁盘中恢复数据。
+两中持久化方法：
+RDB持久化：将Redis在内存中的数据定时dump到磁盘上；
+AOF持久化：将Redis的操作日志以追加的方式写入文件。
+区别：
+RDB持久化是指在指定的时间间隔内将内存中的数据集快照写入磁盘，实际操作过程是fork一个子进程，先将数据集写入临时文件，写入成功后，再替换之前的文件，用二进制压缩存储。
+
+AOF持久化以日志的形式记录服务器所处理的每一个写、删除操作，查询操作不会记录，以文本的方式记录，可以打开文件看到详细的操作记录。
+
+</code></pre>
 
             </div>
             <hr>
