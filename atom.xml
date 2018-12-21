@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ptsxdhcl.github.io/"/>
-  <updated>2018-12-19T00:33:13.072Z</updated>
+  <updated>2018-12-21T03:06:46.585Z</updated>
   <id>http://ptsxdhcl.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>TCP</title>
+    <link href="http://ptsxdhcl.github.io/2018/12/21/tcp-xie-yi-chu-shi/"/>
+    <id>http://ptsxdhcl.github.io/2018/12/21/tcp-xie-yi-chu-shi/</id>
+    <published>2018-12-21T02:37:51.171Z</published>
+    <updated>2018-12-21T03:06:46.585Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;为什么会有TCP-IP协议？&quot;&gt;&lt;a href=&quot;#为什么会有TCP-IP协议？&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="TCP" scheme="http://ptsxdhcl.github.io/categories/TCP/"/>
+    
+    
+      <category term="TCP" scheme="http://ptsxdhcl.github.io/tags/TCP/"/>
+    
+  </entry>
   
   <entry>
     <title>排序问题</title>
