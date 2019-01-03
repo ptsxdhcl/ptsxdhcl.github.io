@@ -427,6 +427,7 @@ CBV(class base views) : 基于类的视图；
 1、django第一次响应某个客户端的请求时，后端随机生成一个token值，后端把这个token值存在session状态中，同时把token值放到cookie里交给浏览器；
 2、浏览器第二次请求时把cookie中的token值加入请求头信息中，一起传给后端；Cookies:{csrftoken:xxxxxxx}
 3、服务器接收请求，将session中的token值与cookie中的token值验证。如果一致返回响应，不一致返回403 Forbidden。
+实现方法：process_view方法-->检查视图是否被 @csrf-exempt 装饰。(如果有这个装饰器则代表买免除csrf认证)
 </code></pre>
 <h2 id="20，基于django中使用ajax发送post请求时，都可以使用哪种方法携带csrf-token。"><a href="#20，基于django中使用ajax发送post请求时，都可以使用哪种方法携带csrf-token。" class="headerlink" title="20，基于django中使用ajax发送post请求时，都可以使用哪种方法携带csrf token。"></a>20，基于django中使用ajax发送post请求时，都可以使用哪种方法携带csrf token。</h2><pre class=" language-markdown"><code class="language-markdown">1、后端将csrftoken值发送给前端，使用post请求时再带上这个值：
   data:{csrfmiddlewaretoken:'{{ csrf_token }}'}
